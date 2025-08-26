@@ -1,0 +1,4059 @@
+{
+    "text_mismatches": [],
+    "tar_eq_mismatches": [
+        {
+            "index": 6,
+            "original": [
+                "<add>(+30, 46, 38, 11, 18)=143<eoe>",
+                "<subtract>(184, 143)=41<eoe>"
+            ],
+            "processed": [
+                "<add>(30, 46, 38, 11, 18)=143",
+                "<subtract>(184, 143)=41"
+            ]
+        },
+        {
+            "index": 22,
+            "original": [
+                "<multiply>(2, 20, 0.01)=.4<eoe>",
+                "<multiply>(0.4, 1000)=400<eoe>"
+            ],
+            "processed": [
+                "<multiply>(2, 20, 0.01)=0.4",
+                "<multiply>(.4, 1000)=400"
+            ]
+        },
+        {
+            "index": 29,
+            "original": [
+                "<multiply>(3, 5)=15<eoe>",
+                "<multiply>(1.2, 4)=4.80<eoe>",
+                "<multiply>(0.5, 5)=2.50<eoe>",
+                "<add>(15, 4.8, 2.5, 2.7)=25<eoe>",
+                "<divide>(25, 5)=5<eoe>"
+            ],
+            "processed": [
+                "<multiply>(3, 5)=15",
+                "<multiply>(1.20, 4)=4.80",
+                "<multiply>(0.5, 5)=2.50",
+                "<add>(15, 4.8, 2.5, 2.7)=25",
+                "<divide>(25, 5)=5"
+            ]
+        },
+        {
+            "index": 57,
+            "original": [
+                "<multiply>(2, 1)=2<eoe>",
+                "<multiply>(1, 1)=1<eoe>",
+                "<multiply>(2, 3)=6<eoe>",
+                "<add>(2, 1, 6, 6)=15<eoe>"
+            ],
+            "processed": [
+                "<multiply>(2, 1)=2",
+                "<multiply>(1, 1)=1",
+                "<multiply>(2, 3)=6",
+                "<multiply>(2, 3)=6",
+                "<add>(2, 1, 6, 6)=15"
+            ]
+        },
+        {
+            "index": 82,
+            "original": [
+                "<subtract>(9, 4)=5<eoe>",
+                "<add>(1.5, 5.5)=7<eoe>",
+                "<multiply>(7, 5)=35<eoe>",
+                "<multiply>(1.5, 4)=6<eoe>",
+                "<add>(35, 6)=41<eoe>"
+            ],
+            "processed": [
+                "<subtract>(9, 4)=5",
+                "<add>(1.50, 5.50)=7",
+                "<multiply>(7, 5)=35",
+                "<multiply>(1.50, 4)=6",
+                "<add>(35, 6)=41"
+            ]
+        },
+        {
+            "index": 94,
+            "original": [
+                "<subtract>(0.5, 0.25)=0.25<eoe>"
+            ],
+            "processed": [
+                "<subtract>(0.50, 0.25)=0.25"
+            ]
+        },
+        {
+            "index": 112,
+            "original": [
+                "<multiply>(2, 20)=40<eoe>",
+                "<multiply>(40, 2)=80<eoe>",
+                "<add>(40, 80)=120<eoe>",
+                "<divide>(120, 60)=2<eoe>"
+            ],
+            "processed": [
+                "<multiply>(2, 20)=40",
+                "<multiply>(2, 20)=40",
+                "<multiply>(40, 2)=80",
+                "<add>(40, 80)=120",
+                "<divide>(120, 60)=2"
+            ]
+        },
+        {
+            "index": 128,
+            "original": [
+                "<multiply>(90, 2)=180<eoe>",
+                "<multiply>(180, 0.2)=36<eoe>",
+                "<add>(180, 36)=216<eoe>"
+            ],
+            "processed": [
+                "<multiply>(90, 2)=180",
+                "<multiply>(180, 0.20)=36",
+                "<add>(180, 36)=216"
+            ]
+        },
+        {
+            "index": 136,
+            "original": [
+                "<multiply>(5, 2.5)=12.50<eoe>",
+                "<multiply>(5, 1)=5.00<eoe>",
+                "<add>(12.5, 12.5, 5.0)=30.00<eoe>",
+                "<multiply>(30, 0.1)=3.00<eoe>",
+                "<subtract>(30, 3)=27.00<eoe>",
+                "<subtract>(50, 27)=23.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(5, 2.5)=12.50",
+                "<multiply>(5, 1)=5.00",
+                "<add>(12.50, 12.50, 5.00)=30.00",
+                "<multiply>(30, 0.10)=3.00",
+                "<subtract>(30, 3)=27.00",
+                "<subtract>(50, 27)=23.00"
+            ]
+        },
+        {
+            "index": 175,
+            "original": [
+                "<multiply>(200, 0.6)=120<eoe>",
+                "<subtract>(200, 120)=80<eoe>",
+                "<subtract>(80, 40)=40<eoe>"
+            ],
+            "processed": [
+                "<multiply>(200, 0.60)=120",
+                "<subtract>(200, 120)=80",
+                "<subtract>(80, 40)=40"
+            ]
+        },
+        {
+            "index": 181,
+            "original": [
+                "<subtract>(7, 4.2, 2.05)=0.75<eoe>",
+                "<subtract>(0.75, 0.25, 0.1)=0.40<eoe>",
+                "<divide>(0.4, 0.05)=8<eoe>"
+            ],
+            "processed": [
+                "<subtract>(7, 4.2, 2.05)=0.75",
+                "<subtract>(0.75, 0.25, 0.10)=0.40",
+                "<divide>(0.40, 0.05)=8"
+            ]
+        },
+        {
+            "index": 188,
+            "original": [
+                "<subtract>(3, 2)=1<eoe>",
+                "<subtract>(2, 1.5)=.5<eoe>",
+                "<add>(1, 0.5, 1.5)=3<eoe>",
+                "<multiply>(3, 12)=36<eoe>"
+            ],
+            "processed": [
+                "<subtract>(3, 2)=1",
+                "<subtract>(2, 1.5)=0.5",
+                "<add>(1, 0.5, 1.5)=3",
+                "<multiply>(3, 12)=36"
+            ]
+        },
+        {
+            "index": 207,
+            "original": [
+                "<multiply>(600, 5)=3000<eoe>",
+                "<multiply>(600, 2, 2)=2400<eoe>",
+                "<add>(3000, 2400)=5400<eoe>"
+            ],
+            "processed": [
+                "<multiply>(600, 5)=3000",
+                "<multiply>((600, 2), 2)=2400",
+                "<add>(3000, 2400)=5400"
+            ]
+        },
+        {
+            "index": 227,
+            "original": [
+                "<multiply>(90, 0.3)=27<eoe>",
+                "<subtract>(90, 27)=63<eoe>",
+                "<multiply>(15, 3)=45<eoe>",
+                "<subtract>(63, 45)=18<eoe>"
+            ],
+            "processed": [
+                "<multiply>(90, 0.30)=27",
+                "<subtract>(90, 27)=63",
+                "<multiply>(15, 3)=45",
+                "<subtract>(63, 45)=18"
+            ]
+        },
+        {
+            "index": 239,
+            "original": [
+                "<multiply>(7, 25)=175<eoe>",
+                "<multiply>(175, 0.1)=17.5<eoe>",
+                "<multiply>(7, 1.5)=10.50<eoe>",
+                "<add>(17.5, 10.5)=28<eoe>",
+                "<multiply>(2, 20)=40<eoe>",
+                "<subtract>(40, 28)=12<eoe>"
+            ],
+            "processed": [
+                "<multiply>(7, 25)=175",
+                "<multiply>(175, 0.10)=17.5",
+                "<multiply>(7, 1.5)=10.50",
+                "<add>(17.5, 10.5)=28",
+                "<multiply>(2, 20)=40",
+                "<subtract>(40, 28)=12"
+            ]
+        },
+        {
+            "index": 247,
+            "original": [
+                "<subtract>(300, 100)=200<eoe>",
+                "<divide>(60, 2, 3)=90<eoe>"
+            ],
+            "processed": [
+                "<subtract>(300, 100)=200",
+                "<divide>(60, (2, 3))=90"
+            ]
+        },
+        {
+            "index": 259,
+            "original": [
+                "<multiply>(1, 4)=4<eoe>",
+                "<multiply>(2, 4)=8<eoe>",
+                "<add>(10, 4, 8)=22<eoe>"
+            ],
+            "processed": [
+                "<multiply>(1, 4)=4",
+                "<multiply>(2, 4)=8",
+                "<multiply>(1, 4)=4",
+                "<add>(10, 4, 8)=22"
+            ]
+        },
+        {
+            "index": 260,
+            "original": [
+                "<divide>(4, 2)=2<eoe>",
+                "<multiply>(3, 2)=6.00<eoe>",
+                "<multiply>(5, 2)=10.00<eoe>",
+                "<multiply>(2, 2)=4<eoe>",
+                "<add>(6, 10, 4)=20.00<eoe>"
+            ],
+            "processed": [
+                "<divide>(4, 2)=2",
+                "<multiply>(3, 2)=6.00",
+                "<divide>(4, 2)=2",
+                "<multiply>(5, 2)=10.00",
+                "<multiply>(2, 2)=4",
+                "<add>(6, 10, 4)=20.00"
+            ]
+        },
+        {
+            "index": 299,
+            "original": [
+                "<multiply>(1.5, 2)=3<eoe>",
+                "<add>(3, 3)=6<eoe>"
+            ],
+            "processed": [
+                "<multiply>(1.5, 2)=3",
+                "<multiply>(1.5, 2)=3",
+                "<add>(3, 3)=6"
+            ]
+        },
+        {
+            "index": 308,
+            "original": [
+                "<multiply>(50, 2)=100<eoe>",
+                "<subtract>(100, 40)=60<eoe>",
+                "<multiply>(100, 0.6)=60<eoe>",
+                "<subtract>(100, 20)=80<eoe>",
+                "<multiply>(100, 0.8)=80<eoe>",
+                "<add>(60, 80)=140<eoe>"
+            ],
+            "processed": [
+                "<multiply>(50, 2)=100",
+                "<subtract>(100, 40)=60",
+                "<multiply>(100, 0.60)=60",
+                "<subtract>(100, 20)=80",
+                "<multiply>(100, 0.80)=80",
+                "<add>(60, 80)=140"
+            ]
+        },
+        {
+            "index": 312,
+            "original": [
+                "<subtract>(20, 2)=18<eoe>",
+                "<divide>(18, 2, 3)=27<eoe>"
+            ],
+            "processed": [
+                "<subtract>(20, 2)=18",
+                "<divide>(18, (2, 3))=27"
+            ]
+        },
+        {
+            "index": 356,
+            "original": [
+                "<multiply>(6, 0.75)=4.50<eoe>",
+                "<subtract>(6, 4.5)=1.50<eoe>",
+                "<multiply>(1.5, 2)=3.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(6, 0.75)=4.50",
+                "<subtract>(6, 4.50)=1.50",
+                "<multiply>(1.5, 2)=3.00"
+            ]
+        },
+        {
+            "index": 366,
+            "original": [
+                "<add>(600, 250, 150, 150)=1150.00<eoe>",
+                "<multiply>(1150, 0.4)=460.00<eoe>"
+            ],
+            "processed": [
+                "<add>(600, 250, 150, 150)=1150.00",
+                "<multiply>(1150, 0.40)=460.00"
+            ]
+        },
+        {
+            "index": 370,
+            "original": [
+                "<divide>(10000, 100000)=.10<eoe>",
+                "<add>(200000, 20000)=220000<eoe>"
+            ],
+            "processed": [
+                "<divide>(10000, 100000)=0.10",
+                "<add>(200000, 20000)=220000"
+            ]
+        },
+        {
+            "index": 409,
+            "original": [
+                "<multiply>(25, 2.4)=60<eoe>",
+                "<multiply>(0.1, 60)=6<eoe>"
+            ],
+            "processed": [
+                "<multiply>(25, 2.4)=60",
+                "<multiply>(0.10, 60)=6"
+            ]
+        },
+        {
+            "index": 520,
+            "original": [
+                "<multiply>(15, 2)=30<eoe>",
+                "<multiply>(20, 1)=20<eoe>",
+                "<subtract>(50, 15, 20)=15<eoe>",
+                "<add>(30, 20, 30)=80<eoe>"
+            ],
+            "processed": [
+                "<multiply>(15, 2)=30",
+                "<multiply>(20, 1)=20",
+                "<subtract>(50, 15, 20)=15",
+                "<multiply>(15, 2)=30",
+                "<add>(30, 20, 30)=80"
+            ]
+        },
+        {
+            "index": 532,
+            "original": [
+                "<multiply>(60, 1.5)=90<eoe>",
+                "<add>(60, 90)=150<eoe>"
+            ],
+            "processed": [
+                "<multiply>(60, 1.50)=90",
+                "<add>(60, 90)=150"
+            ]
+        },
+        {
+            "index": 548,
+            "original": [
+                "<multiply>(10000, 0.1)=1000<eoe>",
+                "<multiply>(1000, 0.3)=300<eoe>",
+                "<subtract>(1000, 300)=700<eoe>"
+            ],
+            "processed": [
+                "<multiply>(10000, 0.10)=1000",
+                "<multiply>(1000, 0.30)=300",
+                "<subtract>(1000, 300)=700"
+            ]
+        },
+        {
+            "index": 563,
+            "original": [
+                "<subtract>(22, 3)=19<eoe>",
+                "<subtract>(19, 4)=15<eoe>",
+                "<multiply>(15, 0.2)=3<eoe>",
+                "<add>(15, 3)=18<eoe>"
+            ],
+            "processed": [
+                "<subtract>(22, 3)=19",
+                "<subtract>(19, 4)=15",
+                "<multiply>(15, 0.20)=3",
+                "<add>(15, 3)=18"
+            ]
+        },
+        {
+            "index": 572,
+            "original": [
+                "<multiply>(5, 30)=150<eoe>",
+                "<multiply>(4, 28)=112<eoe>",
+                "<multiply>(4, 27)=108<eoe>",
+                "<add>(150, 112, 108)=370<eoe>",
+                "<add>(2.1, 0.5, 0.2)=2.80<eoe>",
+                "<multiply>(2.8, 370)=1036<eoe>"
+            ],
+            "processed": [
+                "<multiply>(5, 30)=150",
+                "<multiply>(4, 28)=112",
+                "<multiply>(4, 27)=108",
+                "<add>(150, 112, 108)=370",
+                "<add>(2.10, 0.50, 0.20)=2.80",
+                "<multiply>(2.80, 370)=1036"
+            ]
+        },
+        {
+            "index": 573,
+            "original": [
+                "<multiply>(15, 0.2)=3<eoe>"
+            ],
+            "processed": [
+                "<multiply>(15, 0.20)=3"
+            ]
+        },
+        {
+            "index": 588,
+            "original": [
+                "<add>(0.25, 0.25, 0.1)=0.60<eoe>",
+                "<multiply>(6, 0.1)=0.60<eoe>",
+                "<add>(0.7, 0.75, 0.6, 0.6)=2.65<eoe>",
+                "<multiply>(2.65, 100)=265<eoe>"
+            ],
+            "processed": [
+                "<add>(0.25, 0.25, 0.10)=0.60",
+                "<multiply>(6, 0.10)=0.60",
+                "<add>(0.70, 0.75, 0.60, 0.60)=2.65",
+                "<multiply>(2.65, 100)=265"
+            ]
+        },
+        {
+            "index": 611,
+            "original": [
+                "<multiply>(8, 0.5)=4<eoe>",
+                "<add>(8, 4)=12<eoe>",
+                "<multiply>(12, 7)=84<eoe>"
+            ],
+            "processed": [
+                "<multiply>(8, 0.50)=4",
+                "<add>(8, 4)=12",
+                "<multiply>(12, 7)=84"
+            ]
+        },
+        {
+            "index": 622,
+            "original": [
+                "<add>(7.5, 10, 8.5, 9)=35.00<eoe>",
+                "<add>(35, 7)=42.00<eoe>"
+            ],
+            "processed": [
+                "<add>(7.50, 10, 8.5, 9)=35.00",
+                "<add>(35, 7)=42.00"
+            ]
+        },
+        {
+            "index": 661,
+            "original": [
+                "<multiply>(500, 10, 0.01)=50<eoe>",
+                "<subtract>(500, 155)=345<eoe>"
+            ],
+            "processed": [
+                "<multiply>(500, 10, 0.01)=50",
+                "<multiply>(500, 10, 0.01)=50",
+                "<subtract>(500, 155)=345"
+            ]
+        },
+        {
+            "index": 670,
+            "original": [
+                "<multiply>(2, 2.5)=5.00<eoe>",
+                "<add>(9, 5, 3, 4)=21.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(2, 2.50)=5.00",
+                "<add>(9, 5, 3, 4)=21.00"
+            ]
+        },
+        {
+            "index": 695,
+            "original": [
+                "<divide>(4, 1, 8)=32<eoe>",
+                "<divide>(32, 8)=4<eoe>"
+            ],
+            "processed": [
+                "<divide>(4, (1, 8))=32",
+                "<divide>(32, 8)=4"
+            ]
+        },
+        {
+            "index": 699,
+            "original": [
+                "<multiply>(0.85, 30)=25.50<eoe>",
+                "<multiply>(0.45, 30)=13.50<eoe>",
+                "<subtract>(25.5, 13.5)=12.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(0.85, 30)=25.50",
+                "<multiply>(0.45, 30)=13.50",
+                "<subtract>(25.50, 13.50)=12.00"
+            ]
+        },
+        {
+            "index": 756,
+            "original": [
+                "<multiply>(60, 40)=2400<eoe>",
+                "<multiply>(30, 2400)=72000<eoe>",
+                "<multiply>(72000, 0.2)=14400<eoe>"
+            ],
+            "processed": [
+                "<multiply>(60, 40)=2400",
+                "<multiply>(30, 2400)=72000",
+                "<multiply>(72000, 0.20)=14400"
+            ]
+        },
+        {
+            "index": 765,
+            "original": [
+                "<multiply>(2, 40)=80.00<eoe>",
+                "<multiply>(4, 50)=200.00<eoe>",
+                "<add>(80, 200)=280.00<eoe>",
+                "<multiply>(280, 0.2)=56.00<eoe>",
+                "<subtract>(280, 56)=224.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(2, 40)=80.00",
+                "<multiply>(4, 50)=200.00",
+                "<add>(80, 200)=280.00",
+                "<multiply>(280, 0.20)=56.00",
+                "<subtract>(280, 56)=224.00"
+            ]
+        },
+        {
+            "index": 773,
+            "original": [
+                "<multiply>(50, 0.3)=15<eoe>",
+                "<subtract>(50, 15)=35<eoe>"
+            ],
+            "processed": [
+                "<multiply>(50, 0.30)=15",
+                "<subtract>(50, 15)=35"
+            ]
+        },
+        {
+            "index": 848,
+            "original": [
+                "<multiply>(2, 1)=2<eoe>",
+                "<multiply>(2, 4)=8<eoe>"
+            ],
+            "processed": [
+                "<multiply>(2, 1)=2",
+                "<multiply>(2, 4)=8",
+                "<multiply>(2, 4)=8"
+            ]
+        },
+        {
+            "index": 880,
+            "original": [
+                "<add>(4, 5)=9<eoe>",
+                "<multiply>(9, 0.25)=2.25<eoe>",
+                "<multiply>(4, 0.1)=0.40<eoe>",
+                "<multiply>(7, 0.05)=0.35<eoe>",
+                "<add>(2.25, 0.4, 0.35)=3<eoe>"
+            ],
+            "processed": [
+                "<add>(4, 5)=9",
+                "<multiply>(9, 0.25)=2.25",
+                "<multiply>(4, 0.10)=0.40",
+                "<multiply>(7, 0.05)=0.35",
+                "<add>(2.25, 0.40, 0.35)=3"
+            ]
+        },
+        {
+            "index": 930,
+            "original": [
+                "<multiply>(4, 7)=28<eoe>",
+                "<multiply>(0.5, 4)=2<eoe>",
+                "<add>(28, 2)=30<eoe>"
+            ],
+            "processed": [
+                "<multiply>(4, 7)=28",
+                "<multiply>(0.50, 4)=2",
+                "<add>(28, 2)=30"
+            ]
+        },
+        {
+            "index": 941,
+            "original": [
+                "<multiply>(20, 0.5)=10<eoe>",
+                "<divide>(20, 2)=10<eoe>",
+                "<multiply>(10, 0.5)=5.00<eoe>",
+                "<multiply>(30, 0.5)=15.00<eoe>",
+                "<multiply>(30, 3)=90<eoe>",
+                "<multiply>(90, 0.5)=45.00<eoe>",
+                "<add>(10, 5, 15, 45)=75.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(20, 0.50)=10",
+                "<divide>(20, 2)=10",
+                "<multiply>(10, 0.50)=5.00",
+                "<multiply>(30, 0.50)=15.00",
+                "<multiply>(30, 3)=90",
+                "<multiply>(90, 0.50)=45.00",
+                "<add>(10, 5, 15, 45)=75.00"
+            ]
+        },
+        {
+            "index": 948,
+            "original": [
+                "<add>(5, 4)=9<eoe>",
+                "<multiply>(20, 0.1)=2.00<eoe>",
+                "<subtract>(20, 2)=18.00<eoe>",
+                "<multiply>(18, 9)=162<eoe>",
+                "<multiply>(9, 5)=45.00<eoe>",
+                "<add>(162, 45)=207.00<eoe>"
+            ],
+            "processed": [
+                "<add>(5, 4)=9",
+                "<multiply>(20, 0.10)=2.00",
+                "<subtract>(20, 2)=18.00",
+                "<multiply>(18, 9)=162",
+                "<multiply>(9, 5)=45.00",
+                "<add>(162, 45)=207.00"
+            ]
+        },
+        {
+            "index": 977,
+            "original": [
+                "<multiply>(5, 18)=90<eoe>",
+                "<add>(90, 20)=110<eoe>",
+                "<multiply>(110, 0.1)=11<eoe>",
+                "<add>(110, 11)=121<eoe>"
+            ],
+            "processed": [
+                "<multiply>(5, 18)=90",
+                "<add>(90, 20)=110",
+                "<multiply>(110, 0.10)=11",
+                "<add>(110, 11)=121"
+            ]
+        },
+        {
+            "index": 981,
+            "original": [
+                "<multiply>(4.5, 3)=13.50<eoe>",
+                "<multiply>(7, 0.5)=3.50<eoe>",
+                "<multiply>(3, 5)=15<eoe>",
+                "<divide>(18, 2)=9<eoe>",
+                "<multiply>(9, 4)=36<eoe>",
+                "<add>(13.5, 3.5, 15, 36)=68<eoe>"
+            ],
+            "processed": [
+                "<multiply>(4.50, 3)=13.50",
+                "<multiply>(7, 0.5)=3.50",
+                "<multiply>(3, 5)=15",
+                "<divide>(18, 2)=9",
+                "<multiply>(9, 4)=36",
+                "<add>(13.50, 3.50, 15, 36)=68"
+            ]
+        },
+        {
+            "index": 988,
+            "original": [
+                "<multiply>(31, 20, 0.58)=359.60<eoe>",
+                "<add>(359.6, 800, 260)=1419.60<eoe>",
+                "<multiply>(21, 20, 0.58)=243.60<eoe>",
+                "<add>(243.6, 900, 200)=1343.60<eoe>",
+                "<subtract>(1419.6, 1343.6)=76<eoe>"
+            ],
+            "processed": [
+                "<multiply>(31, 20, 0.58)=359.60",
+                "<add>(359.60, 800, 260)=1419.60",
+                "<multiply>(21, 20, 0.58)=243.60",
+                "<add>(243.60, 900, 200)=1343.60",
+                "<subtract>(1419.60, 1343.60)=76"
+            ]
+        },
+        {
+            "index": 991,
+            "original": [
+                "<divide>(20, 2)=10<eoe>",
+                "<divide>(10, 2)=5<eoe>",
+                "<multiply>(20, 10)=200<eoe>",
+                "<add>(20, 5)=25<eoe>",
+                "<multiply>(25, 5)=125<eoe>",
+                "<multiply>(5, 10)=50<eoe>",
+                "<add>(50, 125, 200)=375<eoe>"
+            ],
+            "processed": [
+                "<divide>(20, 2)=10",
+                "<divide>(10, 2)=5",
+                "<multiply>(20, 10)=200",
+                "<add>(20, 5)=25",
+                "<multiply>(25, 5)=125",
+                "<divide>(20, 2)=10",
+                "<multiply>(5, 10)=50",
+                "<add>(50, 125, 200)=375"
+            ]
+        },
+        {
+            "index": 994,
+            "original": [
+                "<divide>(12, 2)=6<eoe>",
+                "<add>(6, 5)=11<eoe>",
+                "<divide>(6, 2)=3<eoe>",
+                "<add>(8, 11)=19<eoe>"
+            ],
+            "processed": [
+                "<divide>(12, 2)=6",
+                "<divide>(12, 2)=6",
+                "<add>(6, 5)=11",
+                "<divide>(6, 2)=3",
+                "<add>(8, 11)=19"
+            ]
+        },
+        {
+            "index": 1006,
+            "original": [
+                "<multiply>(80, 0.15)=12<eoe>",
+                "<add>(80, 12)=92<eoe>",
+                "<add>(92, 28)=120<eoe>",
+                "<multiply>(120, 0.1)=12<eoe>",
+                "<add>(120, 12)=132<eoe>"
+            ],
+            "processed": [
+                "<multiply>(80, 0.15)=12",
+                "<add>(80, 12)=92",
+                "<add>(92, 28)=120",
+                "<multiply>(120, 0.10)=12",
+                "<add>(120, 12)=132"
+            ]
+        },
+        {
+            "index": 1076,
+            "original": [
+                "<multiply>(3, 1)=3<eoe>",
+                "<multiply>(5, 1)=5<eoe>",
+                "<multiply>(2, 0.5)=1<eoe>",
+                "<add>(3, 5, 1)=9.00<eoe>",
+                "<subtract>(10, 9)=1.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(3, 1)=3",
+                "<multiply>(5, 1)=5",
+                "<multiply>(2, 0.50)=1",
+                "<add>(3, 5, 1)=9.00",
+                "<subtract>(10, 9)=1.00"
+            ]
+        },
+        {
+            "index": 1085,
+            "original": [
+                "<multiply>(3, 15)=45.00<eoe>",
+                "<multiply>(2, 14)=28.00<eoe>",
+                "<multiply>(2, 13.5)=27.00<eoe>",
+                "<add>(45, 28, 27)=100.00<eoe>",
+                "<divide>(100, 4)=25.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(3, 15)=45.00",
+                "<multiply>(2, 14)=28.00",
+                "<multiply>(2, 13.50)=27.00",
+                "<add>(45, 28, 27)=100.00",
+                "<divide>(100, 4)=25.00"
+            ]
+        },
+        {
+            "index": 1099,
+            "original": [
+                "<multiply>(2, 12)=24<eoe>",
+                "<add>(10, 12)=22<eoe>",
+                "<multiply>(1, 22)=22<eoe>",
+                "<multiply>(3, 24)=72<eoe>",
+                "<add>(22, 24, 72)=118<eoe>"
+            ],
+            "processed": [
+                "<multiply>(2, 12)=24",
+                "<add>(10, 12)=22",
+                "<multiply>(1, 22)=22",
+                "<multiply>(2, 12)=24",
+                "<multiply>(3, 24)=72",
+                "<add>(22, 24, 72)=118"
+            ]
+        },
+        {
+            "index": 1103,
+            "original": [
+                "<multiply>(2000, 52)=104000<eoe>",
+                "<add>(250000, 104000)=354000<eoe>",
+                "<multiply>(0.5, 354000)=177000<eoe>",
+                "<add>(177000, 354000)=531000<eoe>",
+                "<add>(531000, 354000)=885000<eoe>"
+            ],
+            "processed": [
+                "<multiply>(2000, 52)=104000",
+                "<add>(250000, 104000)=354000",
+                "<multiply>(.5, 354000)=177000",
+                "<add>(177000, 354000)=531000",
+                "<add>(531000, 354000)=885000"
+            ]
+        },
+        {
+            "index": 1151,
+            "original": [
+                "<subtract>(68, 18)=50<eoe>",
+                "<add>(68, 82, 50)=200<eoe>",
+                "<subtract>(200, 24)=176<eoe>",
+                "<multiply>(3.5, 176)=616<eoe>"
+            ],
+            "processed": [
+                "<subtract>(68, 18)=50",
+                "<add>(68, 82, 50)=200",
+                "<subtract>(200, 24)=176",
+                "<multiply>(3.50, 176)=616"
+            ]
+        },
+        {
+            "index": 1184,
+            "original": [
+                "<multiply>(10, 0.25)=2.50<eoe>",
+                "<multiply>(3, 0.1)=0.30<eoe>",
+                "<multiply>(3, 0.05)=0.15<eoe>",
+                "<multiply>(5, 0.01)=0.05<eoe>"
+            ],
+            "processed": [
+                "<multiply>(10, 0.25)=2.50",
+                "<multiply>(3, 0.10)=0.30",
+                "<multiply>(3, 0.05)=0.15",
+                "<multiply>(5, 0.01)=0.05"
+            ]
+        },
+        {
+            "index": 1202,
+            "original": [
+                "<multiply>(20, 0.2)=4<eoe>",
+                "<add>(20, 4)=24<eoe>",
+                "<add>(20, 24)=44<eoe>"
+            ],
+            "processed": [
+                "<multiply>(20, 0.20)=4",
+                "<add>(20, 4)=24",
+                "<add>(20, 24)=44"
+            ]
+        },
+        {
+            "index": 1203,
+            "original": [
+                "<multiply>(4, 20)=80<eoe>",
+                "<add>(80, 10)=90<eoe>",
+                "<multiply>(90, 0.2)=18<eoe>",
+                "<add>(90, 18)=108<eoe>"
+            ],
+            "processed": [
+                "<multiply>(4, 20)=80",
+                "<add>(80, 10)=90",
+                "<multiply>(90, 0.20)=18",
+                "<add>(90, 18)=108"
+            ]
+        },
+        {
+            "index": 1282,
+            "original": [
+                "<multiply>(10, 0.1)=1<eoe>",
+                "<multiply>(2, 0.1)=0.20<eoe>",
+                "<multiply>(15, 0.2)=3.00<eoe>",
+                "<add>(3, 1)=4<eoe>"
+            ],
+            "processed": [
+                "<multiply>(10, 0.10)=1",
+                "<multiply>(2, 0.10)=0.20",
+                "<multiply>(15, 0.20)=3.00",
+                "<add>(3, 1)=4"
+            ]
+        },
+        {
+            "index": 1322,
+            "original": [
+                "<multiply>(12.5, 40)=500<eoe>",
+                "<multiply>(500, 0.2)=100<eoe>",
+                "<subtract>(500, 100)=400<eoe>",
+                "<multiply>(400, 0.15)=60<eoe>",
+                "<subtract>(400, 60)=340<eoe>"
+            ],
+            "processed": [
+                "<multiply>(12.5, 40)=500",
+                "<multiply>(500, 0.20)=100",
+                "<subtract>(500, 100)=400",
+                "<multiply>(400, 0.15)=60",
+                "<subtract>(400, 60)=340"
+            ]
+        },
+        {
+            "index": 1327,
+            "original": [
+                "<multiply>(0.15, 2)=0.30<eoe>",
+                "<add>(0.3, 0.25, 0.35)=0.90<eoe>"
+            ],
+            "processed": [
+                "<multiply>(0.15, 2)=0.30",
+                "<add>(0.30, 0.25, 0.35)=0.90"
+            ]
+        },
+        {
+            "index": 1337,
+            "original": [
+                "<multiply>(50, 8)=400<eoe>",
+                "<multiply>(400, 0.8)=320<eoe>"
+            ],
+            "processed": [
+                "<multiply>(50, 8)=400",
+                "<multiply>(400, 0.80)=320"
+            ]
+        },
+        {
+            "index": 1345,
+            "original": [
+                "<add>(18, 26, 20, 20, 16)=100<eoe>",
+                "<multiply>(0.36, 100)=36.00<eoe>"
+            ],
+            "processed": [
+                "<add>(18, 26, 20, 20, 16)=100",
+                "<multiply>(.36, 100)=36.00"
+            ]
+        },
+        {
+            "index": 1369,
+            "original": [
+                "<multiply>(0.5, 5)=2.50<eoe>",
+                "<multiply>(2.5, 4)=10.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(0.50, 5)=2.50",
+                "<multiply>(2.50, 4)=10.00"
+            ]
+        },
+        {
+            "index": 1378,
+            "original": [
+                "<multiply>(3.2, 2)=6.40<eoe>",
+                "<multiply>(2, 1.9)=3.80<eoe>",
+                "<multiply>(2, 2.4)=4.80<eoe>",
+                "<add>(6.4, 3.8, 4.8)=15<eoe>",
+                "<subtract>(18, 15)=3<eoe>"
+            ],
+            "processed": [
+                "<multiply>(3.20, 2)=6.40",
+                "<multiply>(2, 1.9)=3.80",
+                "<multiply>(2, 2.4)=4.80",
+                "<add>(6.4, 3.8, 4.8)=15",
+                "<subtract>(18, 15)=3"
+            ]
+        },
+        {
+            "index": 1405,
+            "original": [
+                "<add>(300, 200)=500<eoe>",
+                "<add>(500, 500)=1000<eoe>",
+                "<multiply>(2, 500)=1000<eoe>",
+                "<add>(1000, 1000)=2000<eoe>"
+            ],
+            "processed": [
+                "<add>(300, 200)=500",
+                "<add>(300, 200)=500",
+                "<add>(500, 500)=1000",
+                "<multiply>(2, 500)=1000",
+                "<add>(1000, 1000)=2000"
+            ]
+        },
+        {
+            "index": 1455,
+            "original": [
+                "<multiply>(5, 2)=10<eoe>",
+                "<multiply>(6, 1)=6<eoe>",
+                "<multiply>(4, 2)=8<eoe>",
+                "<multiply>(15, 0.6)=9<eoe>",
+                "<add>(10, 6, 8, 9)=33<eoe>"
+            ],
+            "processed": [
+                "<multiply>(5, 2)=10",
+                "<multiply>(6, 1)=6",
+                "<multiply>(4, 2)=8",
+                "<multiply>(15, 0.60)=9",
+                "<add>(10, 6, 8, 9)=33"
+            ]
+        },
+        {
+            "index": 1496,
+            "original": [
+                "<multiply>(500, 2)=1000<eoe>",
+                "<multiply>(500, 60, 0.01)=300<eoe>",
+                "<multiply>(500, 30, 0.01)=150<eoe>",
+                "<add>(1000, 300, 150)=1450<eoe>"
+            ],
+            "processed": [
+                "<multiply>(500, 2)=1000",
+                "<multiply>(500, (60, 0.01))=300",
+                "<multiply>(500, (30, 0.01))=150",
+                "<add>(1000, 300, 150)=1450"
+            ]
+        },
+        {
+            "index": 1561,
+            "original": [
+                "<multiply>(0.5, 600)=300<eoe>",
+                "<divide>(600, 20)=30<eoe>",
+                "<multiply>(4, 30)=120<eoe>",
+                "<subtract>(300, 120)=180<eoe>"
+            ],
+            "processed": [
+                "<multiply>(0.50, 600)=300",
+                "<divide>(600, 20)=30",
+                "<multiply>(4, 30)=120",
+                "<subtract>(300, 120)=180"
+            ]
+        },
+        {
+            "index": 1562,
+            "original": [
+                "<multiply>(4, 2)=8<eoe>",
+                "<multiply>(2, 1)=2<eoe>",
+                "<multiply>(4, 3)=12<eoe>",
+                "<add>(8, 2, 2, 12)=24<eoe>",
+                "<subtract>(32, 24)=8<eoe>",
+                "<divide>(8, 2)=4<eoe>"
+            ],
+            "processed": [
+                "<multiply>(4, 2)=8",
+                "<multiply>(2, 1)=2",
+                "<multiply>(2, 1)=2",
+                "<multiply>(4, 3)=12",
+                "<add>(8, 2, 2, 12)=24",
+                "<subtract>(32, 24)=8",
+                "<divide>(8, 2)=4"
+            ]
+        },
+        {
+            "index": 1585,
+            "original": [
+                "<add>(5, 7)=12<eoe>",
+                "<multiply>(12, 5)=60.00<eoe>",
+                "<add>(5, 60, 60)=125.00<eoe>"
+            ],
+            "processed": [
+                "<add>(5, 7)=12",
+                "<multiply>(12, 5)=60.00",
+                "<multiply>(12, 5)=60.00",
+                "<add>(5, 60, 60)=125.00"
+            ]
+        },
+        {
+            "index": 1590,
+            "original": [
+                "<multiply>(3, 2)=6<eoe>",
+                "<multiply>(6, 4)=24<eoe>",
+                "<add>(6, 6, 24)=36<eoe>",
+                "<divide>(36, 2)=18<eoe>"
+            ],
+            "processed": [
+                "<multiply>(3, 2)=6",
+                "<multiply>(3, 2)=6",
+                "<multiply>(6, 4)=24",
+                "<add>(6, 6, 24)=36",
+                "<divide>(36, 2)=18"
+            ]
+        },
+        {
+            "index": 1629,
+            "original": [
+                "<multiply>(20, 40)=800<eoe>",
+                "<add>(800, 800)=1600<eoe>"
+            ],
+            "processed": [
+                "<multiply>(20, 40)=800",
+                "<multiply>(20, 40)=800",
+                "<add>(800, 800)=1600"
+            ]
+        },
+        {
+            "index": 1640,
+            "original": [
+                "<add>(40, 70)=110<eoe>",
+                "<multiply>(40, 0.25)=10<eoe>",
+                "<multiply>(70, 0.5)=35<eoe>",
+                "<subtract>(110, 10, 35)=65<eoe>"
+            ],
+            "processed": [
+                "<add>(40, 70)=110",
+                "<multiply>(40, 0.25)=10",
+                "<multiply>(70, 0.50)=35",
+                "<subtract>(110, 10, 35)=65"
+            ]
+        },
+        {
+            "index": 1708,
+            "original": [
+                "<multiply>(40, 0.5)=20<eoe>"
+            ],
+            "processed": [
+                "<multiply>(40, 0.50)=20"
+            ]
+        },
+        {
+            "index": 1744,
+            "original": [
+                "<multiply>(3, 3)=9<eoe>",
+                "<divide>(9, 2)=4.50<eoe>",
+                "<divide>(3, 2)=1.50<eoe>",
+                "<subtract>(4.5, 1.5)=3<eoe>"
+            ],
+            "processed": [
+                "<multiply>(3, 3)=9",
+                "<divide>(9, 2)=4.50",
+                "<divide>(3, 2)=1.50",
+                "<subtract>(4.50, 1.50)=3"
+            ]
+        },
+        {
+            "index": 1780,
+            "original": [
+                "<multiply>(10, 30)=300<eoe>",
+                "<divide>(300, 10)=30<eoe>",
+                "<multiply>(30, 2)=60<eoe>",
+                "<multiply>(300, 0.5)=150<eoe>",
+                "<subtract>(150, 60)=90<eoe>"
+            ],
+            "processed": [
+                "<multiply>(10, 30)=300",
+                "<divide>(300, 10)=30",
+                "<multiply>(30, 2)=60",
+                "<multiply>(300, 0.50)=150",
+                "<subtract>(150, 60)=90"
+            ]
+        },
+        {
+            "index": 1818,
+            "original": [
+                "<multiply>(0.4, 80)=32<eoe>",
+                "<multiply>(32, 12)=384<eoe>"
+            ],
+            "processed": [
+                "<multiply>(.4, 80)=32",
+                "<multiply>(32, 12)=384"
+            ]
+        },
+        {
+            "index": 1880,
+            "original": [
+                "<multiply>(3, 16, 5)=240<eoe>",
+                "<multiply>(2, 8, 4)=64<eoe>",
+                "<add>(240, 64)=304<eoe>"
+            ],
+            "processed": [
+                "<multiply>(3, (16, 5))=240",
+                "<multiply>(2, (8, 4))=64",
+                "<add>(240, 64)=304"
+            ]
+        },
+        {
+            "index": 1897,
+            "original": [
+                "<multiply>(2, 13.5)=27.00<eoe>",
+                "<multiply>(4, 6)=24.00<eoe>",
+                "<add>(25.5, 35.0, 27.0, 8.5, 24.0)=120.00<eoe>",
+                "<multiply>(20, 0.01, 120)=24.00<eoe>",
+                "<add>(120, 24.0)=144.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(2, 13.50)=27.00",
+                "<multiply>(4, 6)=24.00",
+                "<add>(25.50, 35.00, 27.00, 8.50, 24.00)=120.00",
+                "<multiply>(20, 0.01, 120)=24.00",
+                "<add>(120, 24.00)=144.00"
+            ]
+        },
+        {
+            "index": 1913,
+            "original": [
+                "<multiply>(101, 5.8)=585.80<eoe>",
+                "<multiply>(113, 5)=565<eoe>",
+                "<multiply>(107, 5.6)=599.20<eoe>",
+                "<multiply>(108, 5.25)=567<eoe>",
+                "<add>(585.8, 565, 599.2, 567)=2317<eoe>"
+            ],
+            "processed": [
+                "<multiply>(101, 5.80)=585.80",
+                "<multiply>(113, 5)=565",
+                "<multiply>(107, 5.60)=599.20",
+                "<multiply>(108, 5.25)=567",
+                "<add>(585.8, 565, 599.2, 567)=2317"
+            ]
+        },
+        {
+            "index": 1927,
+            "original": [
+                "<multiply>(4, 12)=48.00<eoe>",
+                "<multiply>(2, 6)=12.00<eoe>",
+                "<add>(48, 12)=60.00<eoe>",
+                "<multiply>(0.2, 60)=12.00<eoe>",
+                "<add>(60, 12, 5)=77.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(4, 12)=48.00",
+                "<multiply>(2, 6)=12.00",
+                "<add>(48, 12)=60.00",
+                "<multiply>(.20, 60)=12.00",
+                "<add>(60, 12, 5)=77.00"
+            ]
+        },
+        {
+            "index": 1933,
+            "original": [
+                "<multiply>(12.5, 100)=1250<eoe>",
+                "<divide>(1250, 25)=50<eoe>",
+                "<subtract>(60, 50)=10<eoe>"
+            ],
+            "processed": [
+                "<multiply>(12.50, 100)=1250",
+                "<divide>(1250, 25)=50",
+                "<subtract>(60, 50)=10"
+            ]
+        },
+        {
+            "index": 1946,
+            "original": [
+                "<multiply>(2, 1)=2.00<eoe>",
+                "<multiply>(2, 0.5)=1.00<eoe>",
+                "<add>(2.5, 2, 1, 1.5)=7.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(2, 1)=2.00",
+                "<multiply>(2, 0.50)=1.00",
+                "<add>(2.5, 2, 1, 1.5)=7.00"
+            ]
+        },
+        {
+            "index": 1975,
+            "original": [
+                "<multiply>(3.5, 10)=35<eoe>",
+                "<add>(175, 35)=210<eoe>"
+            ],
+            "processed": [
+                "<multiply>(3.50, 10)=35",
+                "<add>(175, 35)=210"
+            ]
+        },
+        {
+            "index": 1980,
+            "original": [
+                "<add>(40, 20)=60<eoe>",
+                "<multiply>(60, 0.05)=3<eoe>",
+                "<multiply>(3, 20)=60<eoe>",
+                "<multiply>(60, 0.1)=6<eoe>",
+                "<add>(6, 3)=9<eoe>"
+            ],
+            "processed": [
+                "<add>(40, 20)=60",
+                "<multiply>(60, 0.05)=3",
+                "<multiply>(3, 20)=60",
+                "<multiply>(60, 0.10)=6",
+                "<add>(6, 3)=9"
+            ]
+        },
+        {
+            "index": 2043,
+            "original": [
+                "<multiply>(20, 2.5)=50.00<eoe>",
+                "<multiply>(5, 12)=60<eoe>",
+                "<multiply>(60, 1.5)=90.00<eoe>",
+                "<multiply>(3, 12)=36<eoe>",
+                "<multiply>(36, 2)=72.00<eoe>",
+                "<add>(50, 90, 72)=212.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(20, 2.50)=50.00",
+                "<multiply>(5, 12)=60",
+                "<multiply>(60, 1.50)=90.00",
+                "<multiply>(3, 12)=36",
+                "<multiply>(36, 2)=72.00",
+                "<add>(50, 90, 72)=212.00"
+            ]
+        },
+        {
+            "index": 2062,
+            "original": [
+                "<add>(5, 4)=9<eoe>",
+                "<multiply>(9, 2)=18.00<eoe>",
+                "<multiply>(4, 3.5)=14.00<eoe>",
+                "<multiply>(3, 1)=3.00<eoe>",
+                "<multiply>(2.5, 2)=5.00<eoe>",
+                "<add>(18, 14, 3, 5)=40.00<eoe>"
+            ],
+            "processed": [
+                "<add>(5, 4)=9",
+                "<multiply>(9, 2)=18.00",
+                "<multiply>(4, 3.50)=14.00",
+                "<multiply>(3, 1)=3.00",
+                "<multiply>(2.5, 2)=5.00",
+                "<add>(18, 14, 3, 5)=40.00"
+            ]
+        },
+        {
+            "index": 2080,
+            "original": [
+                "<multiply>(2, 8)=16<eoe>",
+                "<subtract>(16, 2)=14<eoe>",
+                "<multiply>(14, 0.5)=7<eoe>",
+                "<subtract>(14, 7)=7<eoe>",
+                "<subtract>(7, 2)=5<eoe>"
+            ],
+            "processed": [
+                "<multiply>(2, 8)=16",
+                "<subtract>(16, 2)=14",
+                "<multiply>(14, 0.50)=7",
+                "<subtract>(14, 7)=7",
+                "<subtract>(7, 2)=5"
+            ]
+        },
+        {
+            "index": 2102,
+            "original": [
+                "<divide>(3, 1, 3)=9<eoe>"
+            ],
+            "processed": [
+                "<divide>(3, (1, 3))=9"
+            ]
+        },
+        {
+            "index": 2107,
+            "original": [
+                "<multiply>(100, 0.9)=90<eoe>",
+                "<multiply>(80, 0.75)=60<eoe>",
+                "<multiply>(50, 1)=50<eoe>",
+                "<add>(90, 60, 50)=200<eoe>"
+            ],
+            "processed": [
+                "<multiply>(100, 0.90)=90",
+                "<multiply>(80, 0.75)=60",
+                "<multiply>(50, 1)=50",
+                "<add>(90, 60, 50)=200"
+            ]
+        },
+        {
+            "index": 2116,
+            "original": [
+                "<multiply>(2, 16)=32<eoe>",
+                "<add>(5, 6)=11<eoe>",
+                "<subtract>(32, 11)=21<eoe>",
+                "<multiply>(2, 3.5)=7.00<eoe>",
+                "<multiply>(21, 1)=21.00<eoe>",
+                "<subtract>(21, 7)=14.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(2, 16)=32",
+                "<add>(5, 6)=11",
+                "<subtract>(32, 11)=21",
+                "<multiply>(2, 3.50)=7.00",
+                "<multiply>(21, 1)=21.00",
+                "<subtract>(21, 7)=14.00"
+            ]
+        },
+        {
+            "index": 2161,
+            "original": [
+                "<multiply>(50, 0.1)=5.00<eoe>",
+                "<subtract>(50, 5)=45.00<eoe>",
+                "<multiply>(5.5, 2)=11.00<eoe>",
+                "<add>(45, 11, 10)=66.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(50, 0.10)=5.00",
+                "<subtract>(50, 5)=45.00",
+                "<multiply>(5.50, 2)=11.00",
+                "<add>(45, 11, 10)=66.00"
+            ]
+        },
+        {
+            "index": 2216,
+            "original": [
+                "<divide>(20, 2)=10<eoe>",
+                "<divide>(3, 6)=.5<eoe>",
+                "<multiply>(0.5, 60)=30<eoe>",
+                "<add>(10, 20, 30)=60<eoe>"
+            ],
+            "processed": [
+                "<divide>(20, 2)=10",
+                "<divide>(3, 6)=0.5",
+                "<multiply>(.5, 60)=30",
+                "<add>(10, 20, 30)=60"
+            ]
+        },
+        {
+            "index": 2232,
+            "original": [
+                "<multiply>(3, 10)=30<eoe>",
+                "<multiply>(2, 10)=20<eoe>",
+                "<multiply>(2, 30)=60<eoe>",
+                "<multiply>(2, 20)=40<eoe>",
+                "<add>(60, 40, 30)=130<eoe>"
+            ],
+            "processed": [
+                "<multiply>(3, 10)=30",
+                "<multiply>(2, 10)=20",
+                "<multiply>(2, 30)=60",
+                "<multiply>(2, 20)=40",
+                "<multiply>(3, 10)=30",
+                "<add>(60, 40, 30)=130"
+            ]
+        },
+        {
+            "index": 2269,
+            "original": [
+                "<multiply>(15, 12)=180<eoe>",
+                "<multiply>(0.1, 180)=18.00<eoe>",
+                "<divide>(18, 3)=6<eoe>"
+            ],
+            "processed": [
+                "<multiply>(15, 12)=180",
+                "<multiply>(.10, 180)=18.00",
+                "<divide>(18, 3)=6"
+            ]
+        },
+        {
+            "index": 2284,
+            "original": [
+                "<divide>(3, 2)=1.50<eoe>",
+                "<divide>(2, 2)=1.00<eoe>",
+                "<multiply>(16, 1.5)=24.00<eoe>",
+                "<multiply>(8, 1)=8.00<eoe>",
+                "<add>(24, 8)=32.00<eoe>"
+            ],
+            "processed": [
+                "<divide>(3, 2)=1.50",
+                "<divide>(2, 2)=1.00",
+                "<multiply>(16, 1.50)=24.00",
+                "<multiply>(8, 1)=8.00",
+                "<add>(24, 8)=32.00"
+            ]
+        },
+        {
+            "index": 2310,
+            "original": [
+                "<subtract>(3.5, 3)=0.50<eoe>",
+                "<multiply>(0.5, 10)=5<eoe>"
+            ],
+            "processed": [
+                "<subtract>(3.5, 3)=0.50",
+                "<multiply>(0.50, 10)=5"
+            ]
+        },
+        {
+            "index": 2338,
+            "original": [
+                "<divide>(20, 5000)=.004<eoe>",
+                "<divide>(3, 0.004)=750<eoe>"
+            ],
+            "processed": [
+                "<divide>(20, 5000)=0.004",
+                "<divide>(3, 0.004)=750"
+            ]
+        },
+        {
+            "index": 2360,
+            "original": [
+                "<multiply>(100, 12)=1200<eoe>",
+                "<multiply>(1200, 0.1)=120.00<eoe>",
+                "<add>(1200, 120)=1320.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(100, 12)=1200",
+                "<multiply>(1200, 0.10)=120.00",
+                "<add>(1200, 120)=1320.00"
+            ]
+        },
+        {
+            "index": 2369,
+            "original": [
+                "<multiply>(10, 0.2)=2<eoe>",
+                "<multiply>(16, 0.25)=4<eoe>",
+                "<multiply>(3, 2)=6<eoe>",
+                "<multiply>(4, 5)=20<eoe>",
+                "<add>(6, 20)=26<eoe>"
+            ],
+            "processed": [
+                "<multiply>(10, 0.20)=2",
+                "<multiply>(16, 0.25)=4",
+                "<multiply>(3, 2)=6",
+                "<multiply>(4, 5)=20",
+                "<add>(6, 20)=26"
+            ]
+        },
+        {
+            "index": 2384,
+            "original": [
+                "<multiply>(0.5, 60)=30<eoe>",
+                "<multiply>(20, 2)=40<eoe>",
+                "<subtract>(220, 40)=180<eoe>",
+                "<divide>(180, 30)=6<eoe>"
+            ],
+            "processed": [
+                "<multiply>(.5, 60)=30",
+                "<multiply>(20, 2)=40",
+                "<subtract>(220, 40)=180",
+                "<divide>(180, 30)=6"
+            ]
+        },
+        {
+            "index": 2410,
+            "original": [
+                "<multiply>(4, 0.95)=3.80<eoe>",
+                "<add>(3.8, 6)=9.80<eoe>"
+            ],
+            "processed": [
+                "<multiply>(4, 0.95)=3.80",
+                "<add>(3.80, 6)=9.80"
+            ]
+        },
+        {
+            "index": 2413,
+            "original": [
+                "<multiply>(30, 0.5)=15<eoe>",
+                "<divide>(60, 15)=4<eoe>",
+                "<multiply>(30, 0.2)=6<eoe>",
+                "<add>(30, 6)=36<eoe>",
+                "<divide>(72, 36)=2<eoe>",
+                "<add>(4, 2)=6<eoe>"
+            ],
+            "processed": [
+                "<multiply>(30, 0.50)=15",
+                "<divide>(60, 15)=4",
+                "<multiply>(30, 0.20)=6",
+                "<add>(30, 6)=36",
+                "<divide>(72, 36)=2",
+                "<add>(4, 2)=6"
+            ]
+        },
+        {
+            "index": 2436,
+            "original": [
+                "<divide>(3000, 3, 4)=4000<eoe>",
+                "<multiply>(4000, 3)=12000<eoe>",
+                "<divide>(12000, 3000)=4<eoe>"
+            ],
+            "processed": [
+                "<divide>(3000, (3, 4))=4000",
+                "<multiply>(4000, 3)=12000",
+                "<divide>(12000, 3000)=4"
+            ]
+        },
+        {
+            "index": 2462,
+            "original": [
+                "<multiply>(80, 3)=240<eoe>",
+                "<divide>(240, 60)=4<eoe>",
+                "<multiply>(3.5, 4)=14.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(80, 3)=240",
+                "<divide>(240, 60)=4",
+                "<multiply>(3.50, 4)=14.00"
+            ]
+        },
+        {
+            "index": 2646,
+            "original": [
+                "<multiply>(2.2, 5)=11<eoe>",
+                "<multiply>(2.2, 6)=13.20<eoe>",
+                "<multiply>(13.2, 5)=66<eoe>",
+                "<add>(11, 66)=77<eoe>"
+            ],
+            "processed": [
+                "<multiply>(2.20, 5)=11",
+                "<multiply>(2.20, 6)=13.20",
+                "<multiply>(13.20, 5)=66",
+                "<add>(11, 66)=77"
+            ]
+        },
+        {
+            "index": 2654,
+            "original": [
+                "<multiply>(4, 5)=20.00<eoe>",
+                "<multiply>(2, 3)=6.00<eoe>",
+                "<add>(20, 6)=26.00<eoe>",
+                "<multiply>(52, 26)=1352.00<eoe>",
+                "<multiply>(0.25, 1352)=338.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(4, 5)=20.00",
+                "<multiply>(2, 3)=6.00",
+                "<add>(20, 6)=26.00",
+                "<multiply>(52, 26)=1352.00",
+                "<multiply>(.25, 1352)=338.00"
+            ]
+        },
+        {
+            "index": 2679,
+            "original": [
+                "<multiply>(100, 2)=200<eoe>",
+                "<multiply>(100, 250, 0.01)=250<eoe>",
+                "<add>(200, 250, 200)=650<eoe>"
+            ],
+            "processed": [
+                "<multiply>(100, 2)=200",
+                "<multiply>(100, 250, 0.01)=250",
+                "<multiply>(100, 2)=200",
+                "<add>(200, 250, 200)=650"
+            ]
+        },
+        {
+            "index": 2716,
+            "original": [
+                "<multiply>(90, 0.1)=9<eoe>",
+                "<subtract>(90, 9)=81<eoe>",
+                "<add>(5, 81)=86<eoe>"
+            ],
+            "processed": [
+                "<multiply>(90, 0.10)=9",
+                "<subtract>(90, 9)=81",
+                "<add>(5, 81)=86"
+            ]
+        },
+        {
+            "index": 2724,
+            "original": [
+                "<multiply>(9, 2)=18<eoe>",
+                "<multiply>(18, 1.5)=27<eoe>",
+                "<add>(18, 27)=45<eoe>"
+            ],
+            "processed": [
+                "<multiply>(9, 2)=18",
+                "<multiply>(9, 2)=18",
+                "<multiply>(18, 1.5)=27",
+                "<add>(18, 27)=45"
+            ]
+        },
+        {
+            "index": 2745,
+            "original": [
+                "<add>(+3, 3)=6<eoe>",
+                "<add>(+6, 3)=9<eoe>",
+                "<add>(+9, 3)=12<eoe>",
+                "<divide>(65, 5)=13<eoe>"
+            ],
+            "processed": [
+                "<add>(3, 3)=6",
+                "<add>(6, 3)=9",
+                "<add>(9, 3)=12",
+                "<divide>(65, 5)=13"
+            ]
+        },
+        {
+            "index": 2765,
+            "original": [
+                "<subtract>(55, 6)=49<eoe>",
+                "<add>(55, 49)=104<eoe>",
+                "<multiply>(104, 0.5)=52<eoe>",
+                "<subtract>(55, 52)=3<eoe>"
+            ],
+            "processed": [
+                "<subtract>(55, 6)=49",
+                "<add>(55, 49)=104",
+                "<multiply>(104, 0.50)=52",
+                "<subtract>(55, 52)=3"
+            ]
+        },
+        {
+            "index": 2790,
+            "original": [
+                "<multiply>(24, 7)=168<eoe>",
+                "<multiply>(168, 0.5)=84<eoe>"
+            ],
+            "processed": [
+                "<multiply>(24, 7)=168",
+                "<multiply>(168, 0.50)=84"
+            ]
+        },
+        {
+            "index": 2791,
+            "original": [
+                "<multiply>(0.5, 5)=2.5<eoe>",
+                "<multiply>(0.5, 3)=1.5<eoe>",
+                "<add>(2.5, 1.5)=4<eoe>"
+            ],
+            "processed": [
+                "<multiply>(0.50, 5)=2.5",
+                "<multiply>(0.50, 3)=1.5",
+                "<add>(2.5, 1.5)=4"
+            ]
+        },
+        {
+            "index": 2800,
+            "original": [
+                "<multiply>(4, 0.5)=2.00<eoe>",
+                "<multiply>(2, 0.75)=1.50<eoe>",
+                "<subtract>(10.25, 1.25)=9.00<eoe>",
+                "<add>(2, 1.5, 3.5, 9)=16.00<eoe>",
+                "<subtract>(20, 16)=4<eoe>"
+            ],
+            "processed": [
+                "<multiply>(4, 0.50)=2.00",
+                "<multiply>(2, 0.75)=1.50",
+                "<subtract>(10.25, 1.25)=9.00",
+                "<add>(2, 1.50, 3.50, 9)=16.00",
+                "<subtract>(20, 16)=4"
+            ]
+        },
+        {
+            "index": 2801,
+            "original": [
+                "<add>(5, 3, 3)=11<eoe>",
+                "<add>(3, 2, 2)=7<eoe>",
+                "<subtract>(11, 9.5)=1.50<eoe>",
+                "<subtract>(7, 5)=2<eoe>",
+                "<multiply>(4, 1.5)=6<eoe>",
+                "<multiply>(2, 2)=4<eoe>",
+                "<add>(6, 4)=10<eoe>"
+            ],
+            "processed": [
+                "<add>(5, 3, 3)=11",
+                "<add>(3, 2, 2)=7",
+                "<subtract>(11, 9.5)=1.50",
+                "<subtract>(7, 5)=2",
+                "<multiply>(4, 1.50)=6",
+                "<multiply>(2, 2)=4",
+                "<add>(6, 4)=10"
+            ]
+        },
+        {
+            "index": 2805,
+            "original": [
+                "<multiply>(40, 2)=80<eoe>",
+                "<multiply>(8, 7)=56<eoe>",
+                "<multiply>(0.5, 56)=28<eoe>",
+                "<add>(28, 80)=108<eoe>"
+            ],
+            "processed": [
+                "<multiply>(40, 2)=80",
+                "<multiply>(8, 7)=56",
+                "<multiply>(.5, 56)=28",
+                "<add>(28, 80)=108"
+            ]
+        },
+        {
+            "index": 2859,
+            "original": [
+                "<multiply>(2, 60)=120<eoe>",
+                "<multiply>(0.5, 60)=30<eoe>",
+                "<multiply>(3, 30)=90<eoe>",
+                "<add>(120, 30, 90)=240<eoe>"
+            ],
+            "processed": [
+                "<multiply>(2, 60)=120",
+                "<multiply>(.5, 60)=30",
+                "<multiply>(3, 30)=90",
+                "<add>(120, 30, 90)=240"
+            ]
+        },
+        {
+            "index": 2878,
+            "original": [
+                "<multiply>(0.5, 20)=10<eoe>",
+                "<multiply>(31, 0.5)=15.5<eoe>",
+                "<multiply>(15.5, 2)=31<eoe>",
+                "<add>(31, 10)=41<eoe>"
+            ],
+            "processed": [
+                "<multiply>(0.50, 20)=10",
+                "<multiply>(31, 0.5)=15.5",
+                "<multiply>(15.5, 2)=31",
+                "<add>(31, 10)=41"
+            ]
+        },
+        {
+            "index": 2880,
+            "original": [
+                "<subtract>(100, 60)=40<eoe>",
+                "<multiply>(40, 0.5)=20<eoe>"
+            ],
+            "processed": [
+                "<subtract>(100, 60)=40",
+                "<multiply>(40, 0.50)=20"
+            ]
+        },
+        {
+            "index": 2882,
+            "original": [
+                "<divide>(15, 3)=5<eoe>"
+            ],
+            "processed": [
+                "<divide>(15, 3)=5",
+                "<divide>(15, 3)=5"
+            ]
+        },
+        {
+            "index": 2932,
+            "original": [
+                "<multiply>(6, 2)=12<eoe>",
+                "<multiply>(9, 2)=18<eoe>",
+                "<multiply>(18, 2)=36<eoe>",
+                "<add>(12, 18, 36)=66<eoe>"
+            ],
+            "processed": [
+                "<multiply>(6, 2)=12",
+                "<multiply>(9, 2)=18",
+                "<multiply>(9, 2)=18",
+                "<multiply>(18, 2)=36",
+                "<add>(12, 18, 36)=66"
+            ]
+        },
+        {
+            "index": 2954,
+            "original": [
+                "<multiply>(15, 12)=180<eoe>",
+                "<multiply>(40, 0.3)=12<eoe>",
+                "<multiply>(25, 2)=50<eoe>",
+                "<add>(180, 12, 50)=242<eoe>",
+                "<subtract>(500, 242)=258<eoe>"
+            ],
+            "processed": [
+                "<multiply>(15, 12)=180",
+                "<multiply>(40, 0.30)=12",
+                "<multiply>(25, 2)=50",
+                "<add>(180, 12, 50)=242",
+                "<subtract>(500, 242)=258"
+            ]
+        },
+        {
+            "index": 2959,
+            "original": [
+                "<multiply>(12.5, 3)=37.50<eoe>",
+                "<multiply>(7, 2)=14<eoe>",
+                "<multiply>(14, 5)=70<eoe>",
+                "<divide>(70, 35)=2<eoe>",
+                "<multiply>(3.75, 2)=7.50<eoe>",
+                "<add>(37.5, 14, 7.5)=59<eoe>",
+                "<multiply>(59, 2)=118<eoe>"
+            ],
+            "processed": [
+                "<multiply>(12.50, 3)=37.50",
+                "<multiply>(7, 2)=14",
+                "<multiply>(14, 5)=70",
+                "<divide>(70, 35)=2",
+                "<multiply>(3.75, 2)=7.50",
+                "<add>(37.50, 14, 7.50)=59",
+                "<multiply>(59, 2)=118"
+            ]
+        },
+        {
+            "index": 2989,
+            "original": [
+                "<subtract>(3, 1.5)=1.50<eoe>",
+                "<divide>(1.5, 0.5)=3<eoe>"
+            ],
+            "processed": [
+                "<subtract>(3, 1.5)=1.50",
+                "<divide>(1.50, 0.50)=3"
+            ]
+        },
+        {
+            "index": 3082,
+            "original": [
+                "<multiply>(102, 54)=5508<eoe>",
+                "<multiply>(8, 6, 7)=336<eoe>",
+                "<add>(5508, 336)=5844<eoe>"
+            ],
+            "processed": [
+                "<multiply>(102, 54)=5508",
+                "<multiply>(8, (6, 7))=336",
+                "<add>(5508, 336)=5844"
+            ]
+        },
+        {
+            "index": 3095,
+            "original": [
+                "<add>(3.75, 3.5)=7.25<eoe>",
+                "<multiply>(7.25, 7)=50.75<eoe>",
+                "<multiply>(5, 1.25)=6.25<eoe>",
+                "<subtract>(100, 50.75, 6.25)=43.00<eoe>"
+            ],
+            "processed": [
+                "<add>(3.75, 3.50)=7.25",
+                "<multiply>(7.25, 7)=50.75",
+                "<multiply>(5, 1.25)=6.25",
+                "<subtract>(100, 50.75, 6.25)=43.00"
+            ]
+        },
+        {
+            "index": 3168,
+            "original": [
+                "<multiply>(10, 4, 0.25)=10.00<eoe>",
+                "<multiply>(10, 6, 0.1)=6.00<eoe>",
+                "<multiply>(10, 9, 0.05)=4.50<eoe>",
+                "<multiply>(10, 5, 0.01)=0.50<eoe>",
+                "<add>(10, 6, 4.5, 0.5)=21.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(10, 4, 0.25)=10.00",
+                "<multiply>(10, 6, 0.10)=6.00",
+                "<multiply>(10, 9, 0.05)=4.50",
+                "<multiply>(10, 5, 0.01)=0.50",
+                "<add>(10, 6, 4.5, 0.5)=21.00"
+            ]
+        },
+        {
+            "index": 3207,
+            "original": [
+                "<multiply>(2, 12)=24<eoe>",
+                "<subtract>(24, 8)=16<eoe>",
+                "<subtract>(16, 4)=12<eoe>",
+                "<add>(12, 24)=36<eoe>"
+            ],
+            "processed": [
+                "<multiply>(2, 12)=24",
+                "<subtract>(24, 8)=16",
+                "<subtract>(16, 4)=12",
+                "<multiply>(2, 12)=24",
+                "<add>(12, 24)=36"
+            ]
+        },
+        {
+            "index": 3215,
+            "original": [
+                "<multiply>(8, 16)=128.00<eoe>",
+                "<multiply>(128, 5)=640.00<eoe>",
+                "<multiply>(2, 13.5)=27.00<eoe>",
+                "<multiply>(27, 5)=135.00<eoe>",
+                "<add>(640, 135)=775.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(8, 16)=128.00",
+                "<multiply>(128, 5)=640.00",
+                "<multiply>(2, 13.50)=27.00",
+                "<multiply>(27, 5)=135.00",
+                "<add>(640, 135)=775.00"
+            ]
+        },
+        {
+            "index": 3303,
+            "original": [
+                "<add>(12, 8)=20<eoe>",
+                "<multiply>(20, 7)=140<eoe>",
+                "<multiply>(140, 0.1)=14<eoe>",
+                "<subtract>(140, 14)=126<eoe>",
+                "<multiply>(10, 7)=70<eoe>",
+                "<subtract>(126, 70)=56<eoe>"
+            ],
+            "processed": [
+                "<add>(12, 8)=20",
+                "<multiply>(20, 7)=140",
+                "<multiply>(140, 0.10)=14",
+                "<subtract>(140, 14)=126",
+                "<multiply>(10, 7)=70",
+                "<subtract>(126, 70)=56"
+            ]
+        },
+        {
+            "index": 3358,
+            "original": [
+                "<multiply>(260, 1.2)=312<eoe>",
+                "<add>(260, 312)=572<eoe>"
+            ],
+            "processed": [
+                "<multiply>(260, 1.20)=312",
+                "<add>(260, 312)=572"
+            ]
+        },
+        {
+            "index": 3379,
+            "original": [
+                "<multiply>(4, 3)=12<eoe>",
+                "<add>(3, 1)=4<eoe>",
+                "<add>(12, 4)=16<eoe>",
+                "<add>(16, 4)=20<eoe>"
+            ],
+            "processed": [
+                "<multiply>(4, 3)=12",
+                "<add>(3, 1)=4",
+                "<add>(12, 4)=16",
+                "<add>(3, 1)=4",
+                "<add>(16, 4)=20"
+            ]
+        },
+        {
+            "index": 3382,
+            "original": [
+                "<add>(4, 7, 4, 9)=24<eoe>",
+                "<multiply>(24, 2)=48<eoe>",
+                "<add>(48, 48)=96<eoe>"
+            ],
+            "processed": [
+                "<add>(4, 7, 4, 9)=24",
+                "<multiply>(24, 2)=48",
+                "<multiply>(24, 2)=48",
+                "<add>(48, 48)=96"
+            ]
+        },
+        {
+            "index": 3387,
+            "original": [
+                "<multiply>(2, 0.75)=1.5<eoe>",
+                "<add>(2, 1.5)=3.5<eoe>",
+                "<divide>(1, 2)=.5<eoe>",
+                "<add>(1, 2, 3.5, 0.5)=7<eoe>"
+            ],
+            "processed": [
+                "<multiply>(2, 0.75)=1.5",
+                "<add>(2, 1.5)=3.5",
+                "<divide>(1, 2)=0.5",
+                "<add>(1, 2, 3.5, 0.5)=7"
+            ]
+        },
+        {
+            "index": 3392,
+            "original": [
+                "<multiply>(0.2, 1000000)=200000<eoe>",
+                "<multiply>(1500000, 0.3)=450000<eoe>",
+                "<subtract>(450000, 200000)=250000<eoe>"
+            ],
+            "processed": [
+                "<multiply>(.2, 1000000)=200000",
+                "<multiply>(1500000, 0.3)=450000",
+                "<subtract>(450000, 200000)=250000"
+            ]
+        },
+        {
+            "index": 3490,
+            "original": [
+                "<multiply>(2, 3)=6<eoe>",
+                "<multiply>(6, 4)=24<eoe>",
+                "<multiply>(3, 7)=21<eoe>",
+                "<add>(6, 24, 21)=51<eoe>"
+            ],
+            "processed": [
+                "<multiply>(2, 3)=6",
+                "<multiply>(2, 3)=6",
+                "<multiply>(6, 4)=24",
+                "<multiply>(3, 7)=21",
+                "<add>(6, 24, 21)=51"
+            ]
+        },
+        {
+            "index": 3498,
+            "original": [
+                "<divide>(40, 2)=20<eoe>",
+                "<multiply>(2.5, 20)=50<eoe>",
+                "<multiply>(1.2, 30)=36<eoe>",
+                "<add>(50, 36)=86<eoe>"
+            ],
+            "processed": [
+                "<divide>(40, 2)=20",
+                "<multiply>(2.5, 20)=50",
+                "<multiply>(1.20, 30)=36",
+                "<add>(50, 36)=86"
+            ]
+        },
+        {
+            "index": 3589,
+            "original": [
+                "<multiply>(20, 0.3)=6<eoe>",
+                "<add>(20, 6)=26<eoe>",
+                "<multiply>(26, 0.5)=13<eoe>"
+            ],
+            "processed": [
+                "<multiply>(20, 0.30)=6",
+                "<add>(20, 6)=26",
+                "<multiply>(26, 0.50)=13"
+            ]
+        },
+        {
+            "index": 3604,
+            "original": [
+                "<add>(20, 40)=60<eoe>",
+                "<divide>(60, 75)=0.80<eoe>",
+                "<multiply>(0.8, 100)=80<eoe>",
+                "<divide>(80, 40)=2<eoe>",
+                "<multiply>(2, 100)=200<eoe>"
+            ],
+            "processed": [
+                "<add>(20, 40)=60",
+                "<divide>(60, 75)=0.80",
+                "<multiply>(0.80, 100)=80",
+                "<divide>(80, 40)=2",
+                "<multiply>(2, 100)=200"
+            ]
+        },
+        {
+            "index": 3608,
+            "original": [
+                "<multiply>(10, 0.25)=2.50<eoe>",
+                "<multiply>(12, 0.1)=1.20<eoe>",
+                "<subtract>(4, 2.5, 1.2)=0.30<eoe>",
+                "<divide>(0.3, 0.05)=6<eoe>"
+            ],
+            "processed": [
+                "<multiply>(10, 0.25)=2.50",
+                "<multiply>(12, 0.10)=1.20",
+                "<subtract>(4, 2.5, 1.2)=0.30",
+                "<divide>(0.30, 0.05)=6"
+            ]
+        },
+        {
+            "index": 3640,
+            "original": [
+                "<subtract>(30000, 10000)=20000<eoe>",
+                "<multiply>(20000, 0.4)=8000<eoe>",
+                "<subtract>(20000, 8000)=12000<eoe>"
+            ],
+            "processed": [
+                "<subtract>(30000, 10000)=20000",
+                "<multiply>(20000, 0.40)=8000",
+                "<subtract>(20000, 8000)=12000"
+            ]
+        },
+        {
+            "index": 3656,
+            "original": [
+                "<subtract>(2.2, 0.99)=1.21<eoe>",
+                "<subtract>(1.75, 1.0)=0.75<eoe>",
+                "<add>(1.21, 0.75, 0.04)=2.00<eoe>",
+                "<add>(2, 8)=10.00<eoe>",
+                "<add>(25, 10)=35.00<eoe>"
+            ],
+            "processed": [
+                "<subtract>(2.20, 0.99)=1.21",
+                "<subtract>(1.75, 1.00)=0.75",
+                "<add>(1.21, 0.75, 0.04)=2.00",
+                "<add>(2, 8)=10.00",
+                "<add>(25, 10)=35.00"
+            ]
+        },
+        {
+            "index": 3694,
+            "original": [
+                "<multiply>(15, 11)=165<eoe>",
+                "<divide>(165, 110)=1.50<eoe>",
+                "<multiply>(1.5, 100)=150<eoe>"
+            ],
+            "processed": [
+                "<multiply>(15, 11)=165",
+                "<divide>(165, 110)=1.50",
+                "<multiply>(1.50, 100)=150"
+            ]
+        },
+        {
+            "index": 3747,
+            "original": [
+                "<divide>(1.5, 3)=0.50<eoe>",
+                "<multiply>(0.5, 4)=2<eoe>"
+            ],
+            "processed": [
+                "<divide>(1.50, 3)=0.50",
+                "<multiply>(0.50, 4)=2"
+            ]
+        },
+        {
+            "index": 3768,
+            "original": [
+                "<multiply>(18, 2.5)=45.00<eoe>",
+                "<multiply>(8, 4)=32.00<eoe>",
+                "<add>(45, 32)=77.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(18, 2.50)=45.00",
+                "<multiply>(8, 4)=32.00",
+                "<add>(45, 32)=77.00"
+            ]
+        },
+        {
+            "index": 3771,
+            "original": [
+                "<multiply>(1, 2)=2<eoe>",
+                "<multiply>(2, 2)=4<eoe>",
+                "<multiply>(4, 2)=8<eoe>",
+                "<subtract>(8, 7)=1<eoe>"
+            ],
+            "processed": [
+                "<multiply>(1, 2)=2",
+                "<multiply>(2, 2)=4",
+                "<multiply>(4, 2)=8",
+                "<multiply>(2, 2)=4",
+                "<subtract>(8, 7)=1"
+            ]
+        },
+        {
+            "index": 3872,
+            "original": [
+                "<multiply>(3, 2)=6<eoe>",
+                "<divide>(6, 1, 4)=24<eoe>"
+            ],
+            "processed": [
+                "<multiply>(3, 2)=6",
+                "<divide>(6, (1, 4))=24"
+            ]
+        },
+        {
+            "index": 3874,
+            "original": [
+                "<divide>(3, 5)=.6<eoe>",
+                "<multiply>(80, 0.6)=48<eoe>",
+                "<multiply>(48, 8)=384<eoe>",
+                "<subtract>(20, 4)=16<eoe>",
+                "<divide>(384, 16)=24<eoe>"
+            ],
+            "processed": [
+                "<divide>(3, 5)=0.6",
+                "<multiply>(80, 0.6)=48",
+                "<multiply>(48, 8)=384",
+                "<subtract>(20, 4)=16",
+                "<divide>(384, 16)=24"
+            ]
+        },
+        {
+            "index": 3879,
+            "original": [
+                "<multiply>(1, 2)=2<eoe>",
+                "<add>(2, 1)=3<eoe>",
+                "<multiply>(4, 1)=4<eoe>",
+                "<multiply>(2, 4)=8<eoe>",
+                "<multiply>(3, 4)=12<eoe>",
+                "<add>(4, 8, 8, 12)=32<eoe>"
+            ],
+            "processed": [
+                "<multiply>(1, 2)=2",
+                "<add>(2, 1)=3",
+                "<multiply>(4, 1)=4",
+                "<multiply>(2, 4)=8",
+                "<multiply>(2, 4)=8",
+                "<multiply>(3, 4)=12",
+                "<add>(4, 8, 8, 12)=32"
+            ]
+        },
+        {
+            "index": 3888,
+            "original": [
+                "<multiply>(2, 2)=4.00<eoe>",
+                "<add>(4, 2, 0.5, 1.5)=8.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(2, 2)=4.00",
+                "<add>(4, 2, 0.50, 1.50)=8.00"
+            ]
+        },
+        {
+            "index": 3902,
+            "original": [
+                "<multiply>(1, 0.9)=.9<eoe>",
+                "<multiply>(2, 1, 0.7)=1.4<eoe>"
+            ],
+            "processed": [
+                "<multiply>(1, 0.9)=0.9",
+                "<multiply>(2, 1, 0.7)=1.4"
+            ]
+        },
+        {
+            "index": 3914,
+            "original": [
+                "<multiply>(50, 0.1)=5<eoe>",
+                "<multiply>(5, 24)=120<eoe>",
+                "<multiply>(120, 30)=3600<eoe>"
+            ],
+            "processed": [
+                "<multiply>(50, 0.10)=5",
+                "<multiply>(5, 24)=120",
+                "<multiply>(120, 30)=3600"
+            ]
+        },
+        {
+            "index": 3956,
+            "original": [
+                "<multiply>(0.5, 20)=10<eoe>",
+                "<multiply>(10, 3)=30<eoe>",
+                "<subtract>(30, 15)=15<eoe>"
+            ],
+            "processed": [
+                "<multiply>(0.50, 20)=10",
+                "<multiply>(10, 3)=30",
+                "<subtract>(30, 15)=15"
+            ]
+        },
+        {
+            "index": 4028,
+            "original": [
+                "<multiply>(4, 2)=8.00<eoe>",
+                "<add>(5, 3.5, 8, 3.5)=20.00<eoe>",
+                "<multiply>(20, 0.1)=2.00<eoe>",
+                "<subtract>(20, 2)=18.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(4, 2)=8.00",
+                "<add>(5, 3.5, 8, 3.5)=20.00",
+                "<multiply>(20, 0.10)=2.00",
+                "<subtract>(20, 2)=18.00"
+            ]
+        },
+        {
+            "index": 4050,
+            "original": [
+                "<multiply>(12, 3)=36<eoe>",
+                "<add>(12, 36, 46, 250)=344<eoe>",
+                "<multiply>(0.25, 344)=86.00<eoe>",
+                "<divide>(86, 2)=43.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(12, 3)=36",
+                "<add>(12, 36, 46, 250)=344",
+                "<multiply>(.25, 344)=86.00",
+                "<divide>(86, 2)=43.00"
+            ]
+        },
+        {
+            "index": 4092,
+            "original": [
+                "<multiply>(10, 2)=20.00<eoe>",
+                "<multiply>(2, 2.5)=5.00<eoe>",
+                "<add>(20, 5, 11)=36.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(10, 2)=20.00",
+                "<multiply>(2, 2.50)=5.00",
+                "<add>(20, 5, 11)=36.00"
+            ]
+        },
+        {
+            "index": 4093,
+            "original": [
+                "<multiply>(0.5, 100)=50.00<eoe>",
+                "<multiply>(1, 27)=27.00<eoe>",
+                "<add>(50, 27)=77.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(0.50, 100)=50.00",
+                "<multiply>(1, 27)=27.00",
+                "<add>(50, 27)=77.00"
+            ]
+        },
+        {
+            "index": 4097,
+            "original": [
+                "<add>(10, 10)=20<eoe>",
+                "<multiply>(10, 0.2)=2<eoe>",
+                "<multiply>(10, 0.5)=5<eoe>",
+                "<add>(2, 5)=7<eoe>"
+            ],
+            "processed": [
+                "<add>(10, 10)=20",
+                "<multiply>(10, 0.20)=2",
+                "<multiply>(10, 0.50)=5",
+                "<add>(2, 5)=7"
+            ]
+        },
+        {
+            "index": 4157,
+            "original": [
+                "<multiply>(2, 1)=2.00<eoe>",
+                "<multiply>(4, 0.5)=2.00<eoe>",
+                "<add>(12, 2, 2)=16.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(2, 1)=2.00",
+                "<multiply>(4, 0.50)=2.00",
+                "<add>(12, 2, 2)=16.00"
+            ]
+        },
+        {
+            "index": 4206,
+            "original": [
+                "<add>(2, 1, 3)=6<eoe>",
+                "<divide>(6, 1, 3)=18<eoe>"
+            ],
+            "processed": [
+                "<add>(2, 1, 3)=6",
+                "<divide>(6, (1, 3))=18"
+            ]
+        },
+        {
+            "index": 4214,
+            "original": [
+                "<multiply>(50, 1.2)=60<eoe>",
+                "<multiply>(60, 1.25)=75<eoe>",
+                "<divide>(75, 3)=25<eoe>",
+                "<add>(75, 25)=100<eoe>",
+                "<add>(50, 60, 75, 100)=285<eoe>"
+            ],
+            "processed": [
+                "<multiply>(50, 1.20)=60",
+                "<multiply>(60, 1.25)=75",
+                "<divide>(75, 3)=25",
+                "<add>(75, 25)=100",
+                "<add>(50, 60, 75, 100)=285"
+            ]
+        },
+        {
+            "index": 4230,
+            "original": [
+                "<multiply>(0.5, 4)=2<eoe>",
+                "<multiply>(2, 5)=10<eoe>",
+                "<multiply>(4, 10)=40<eoe>"
+            ],
+            "processed": [
+                "<multiply>(.5, 4)=2",
+                "<multiply>(2, 5)=10",
+                "<multiply>(4, 10)=40"
+            ]
+        },
+        {
+            "index": 4231,
+            "original": [
+                "<divide>(144, 12)=12<eoe>",
+                "<multiply>(0.5, 12)=6<eoe>",
+                "<divide>(20, 5)=4<eoe>",
+                "<multiply>(1.5, 4)=6<eoe>",
+                "<add>(6, 6)=12<eoe>"
+            ],
+            "processed": [
+                "<divide>(144, 12)=12",
+                "<multiply>(0.50, 12)=6",
+                "<divide>(20, 5)=4",
+                "<multiply>(1.50, 4)=6",
+                "<add>(6, 6)=12"
+            ]
+        },
+        {
+            "index": 4249,
+            "original": [
+                "<multiply>(100, 4)=400<eoe>",
+                "<add>(1500, 30, 50)=1580<eoe>",
+                "<add>(400, 1580)=1980<eoe>",
+                "<multiply>(0.1, 1980)=198<eoe>"
+            ],
+            "processed": [
+                "<multiply>(100, 4)=400",
+                "<add>(1500, 30, 50)=1580",
+                "<add>(400, 1580)=1980",
+                "<multiply>(.10, 1980)=198"
+            ]
+        },
+        {
+            "index": 4275,
+            "original": [
+                "<multiply>(5, 20)=100.00<eoe>",
+                "<multiply>(100, 0.2)=20.00<eoe>",
+                "<subtract>(100, 20)=80.00<eoe>",
+                "<multiply>(5, 12)=60.00<eoe>",
+                "<add>(80, 60)=140.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(5, 20)=100.00",
+                "<multiply>(100, 0.20)=20.00",
+                "<subtract>(100, 20)=80.00",
+                "<multiply>(5, 12)=60.00",
+                "<add>(80, 60)=140.00"
+            ]
+        },
+        {
+            "index": 4285,
+            "original": [
+                "<subtract>(12, 3)=9<eoe>",
+                "<multiply>(9, 2)=18<eoe>",
+                "<add>(18, 18, 12)=48<eoe>"
+            ],
+            "processed": [
+                "<subtract>(12, 3)=9",
+                "<multiply>(9, 2)=18",
+                "<multiply>(9, 2)=18",
+                "<add>(18, 18, 12)=48"
+            ]
+        },
+        {
+            "index": 4327,
+            "original": [
+                "<multiply>(80, 0.4)=32<eoe>",
+                "<divide>(32, 4)=8<eoe>",
+                "<multiply>(8, 5)=40<eoe>"
+            ],
+            "processed": [
+                "<multiply>(80, 0.40)=32",
+                "<divide>(32, 4)=8",
+                "<multiply>(8, 5)=40"
+            ]
+        },
+        {
+            "index": 4328,
+            "original": [
+                "<divide>(75, 7.5)=10<eoe>",
+                "<divide>(45, 7.5)=6<eoe>",
+                "<add>(10, 6)=16<eoe>"
+            ],
+            "processed": [
+                "<divide>(75, 7.50)=10",
+                "<divide>(45, 7.50)=6",
+                "<add>(10, 6)=16"
+            ]
+        },
+        {
+            "index": 4342,
+            "original": [
+                "<multiply>(0.25, 1120)=280.00<eoe>",
+                "<subtract>(1120, 280)=840.00<eoe>",
+                "<subtract>(840, 100)=740.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(.25, 1120)=280.00",
+                "<subtract>(1120, 280)=840.00",
+                "<subtract>(840, 100)=740.00"
+            ]
+        },
+        {
+            "index": 4361,
+            "original": [
+                "<multiply>(30, 0.2)=6.00<eoe>",
+                "<subtract>(30, 6)=24.00<eoe>",
+                "<multiply>(2, 10)=20.00<eoe>",
+                "<add>(25, 10, 24, 20)=79.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(30, 0.20)=6.00",
+                "<subtract>(30, 6)=24.00",
+                "<multiply>(2, 10)=20.00",
+                "<add>(25, 10, 24, 20)=79.00"
+            ]
+        },
+        {
+            "index": 4409,
+            "original": [
+                "<multiply>(15, 4)=60<eoe>",
+                "<multiply>(60, 6)=360<eoe>",
+                "<divide>(25, 100)=.25<eoe>",
+                "<multiply>(360, 0.25)=90<eoe>",
+                "<subtract>(360, 90)=270<eoe>"
+            ],
+            "processed": [
+                "<multiply>(15, 4)=60",
+                "<multiply>(60, 6)=360",
+                "<divide>(25, 100)=0.25",
+                "<multiply>(360, 0.25)=90",
+                "<subtract>(360, 90)=270"
+            ]
+        },
+        {
+            "index": 4438,
+            "original": [
+                "<multiply>(0.45, 30)=13.50<eoe>",
+                "<divide>(13.5, 0.5)=27<eoe>"
+            ],
+            "processed": [
+                "<multiply>(0.45, 30)=13.50",
+                "<divide>(13.50, 0.50)=27"
+            ]
+        },
+        {
+            "index": 4443,
+            "original": [
+                "<multiply>(12, 1.5)=18<eoe>",
+                "<subtract>(18, 4)=14<eoe>"
+            ],
+            "processed": [
+                "<multiply>(12, 1.50)=18",
+                "<subtract>(18, 4)=14"
+            ]
+        },
+        {
+            "index": 4460,
+            "original": [
+                "<multiply>(3, 2)=6<eoe>",
+                "<multiply>(6, 60)=360<eoe>",
+                "<subtract>(360, 90)=270<eoe>"
+            ],
+            "processed": [
+                "<multiply>(3, 2)=6",
+                "<multiply>(6, 60)=360",
+                "<multiply>(3, 2)=6",
+                "<subtract>(360, 90)=270"
+            ]
+        },
+        {
+            "index": 4485,
+            "original": [
+                "<multiply>(4, 4)=16.00<eoe>",
+                "<multiply>(4, 3.5)=14.00<eoe>",
+                "<add>(15, 16, 14)=45.00<eoe>",
+                "<multiply>(4, 45)=180.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(4, 4)=16.00",
+                "<multiply>(4, 3.50)=14.00",
+                "<add>(15, 16, 14)=45.00",
+                "<multiply>(4, 45)=180.00"
+            ]
+        },
+        {
+            "index": 4521,
+            "original": [
+                "<multiply>(0.2, 40)=8<eoe>",
+                "<add>(20, 8)=28<eoe>",
+                "<add>(40, 10)=50<eoe>"
+            ],
+            "processed": [
+                "<multiply>(.20, 40)=8",
+                "<add>(20, 8)=28",
+                "<add>(40, 10)=50"
+            ]
+        },
+        {
+            "index": 4523,
+            "original": [
+                "<add>(450, 30, 80)=560<eoe>",
+                "<multiply>(450, 1.2)=540<eoe>",
+                "<multiply>(30, 1.1)=33<eoe>",
+                "<multiply>(80, 1.05)=84<eoe>",
+                "<add>(540, 33, 84)=657<eoe>",
+                "<subtract>(657, 560)=97<eoe>"
+            ],
+            "processed": [
+                "<add>(450, 30, 80)=560",
+                "<multiply>(450, 1.20)=540",
+                "<multiply>(30, 1.10)=33",
+                "<multiply>(80, 1.05)=84",
+                "<add>(540, 33, 84)=657",
+                "<subtract>(657, 560)=97"
+            ]
+        },
+        {
+            "index": 4547,
+            "original": [
+                "<add>(25, 35)=60.00<eoe>",
+                "<multiply>(60, 0.3)=18.00<eoe>",
+                "<subtract>(60, 18)=42.00<eoe>",
+                "<subtract>(40, 8)=32.00<eoe>",
+                "<add>(42, 32, 21)=95.00<eoe>"
+            ],
+            "processed": [
+                "<add>(25, 35)=60.00",
+                "<multiply>(60, 0.30)=18.00",
+                "<subtract>(60, 18)=42.00",
+                "<subtract>(40, 8)=32.00",
+                "<add>(42, 32, 21)=95.00"
+            ]
+        },
+        {
+            "index": 4554,
+            "original": [
+                "<multiply>(40, 2)=80<eoe>",
+                "<multiply>(11.5, 80)=920<eoe>",
+                "<subtract>(920, 410)=510<eoe>"
+            ],
+            "processed": [
+                "<multiply>(40, 2)=80",
+                "<multiply>(11.50, 80)=920",
+                "<subtract>(920, 410)=510"
+            ]
+        },
+        {
+            "index": 4599,
+            "original": [
+                "<multiply>(2, 700)=1400.00<eoe>",
+                "<multiply>(6, 50)=300.00<eoe>",
+                "<multiply>(2, 150)=300.00<eoe>",
+                "<add>(1400, 300, 300)=2000.00<eoe>",
+                "<multiply>(0.15, 2000)=300.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(2, 700)=1400.00",
+                "<multiply>(6, 50)=300.00",
+                "<multiply>(2, 150)=300.00",
+                "<add>(1400, 300, 300)=2000.00",
+                "<multiply>(.15, 2000)=300.00"
+            ]
+        },
+        {
+            "index": 4635,
+            "original": [
+                "<multiply>(50, 0.2)=10.00<eoe>",
+                "<add>(50, 10)=60.00<eoe>",
+                "<add>(60, 20)=80.00<eoe>",
+                "<multiply>(80, 0.2)=16.00<eoe>",
+                "<add>(80, 16)=96.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(50, 0.20)=10.00",
+                "<add>(50, 10)=60.00",
+                "<add>(60, 20)=80.00",
+                "<multiply>(80, 0.20)=16.00",
+                "<add>(80, 16)=96.00"
+            ]
+        },
+        {
+            "index": 4662,
+            "original": [
+                "<multiply>(7, 2)=14<eoe>",
+                "<multiply>(0.25, 3)=.75<eoe>",
+                "<multiply>(0.75, 14)=10.5<eoe>",
+                "<multiply>(0.5, 2)=1<eoe>",
+                "<multiply>(1, 14)=14<eoe>",
+                "<add>(0.5, 10.5, 14)=25<eoe>"
+            ],
+            "processed": [
+                "<multiply>(7, 2)=14",
+                "<multiply>(.25, 3)=0.75",
+                "<multiply>(.75, 14)=10.5",
+                "<multiply>(.5, 2)=1",
+                "<multiply>(1, 14)=14",
+                "<add>(.5, 10.5, 14)=25"
+            ]
+        },
+        {
+            "index": 4672,
+            "original": [
+                "<multiply>(2, 3.5)=7.00<eoe>",
+                "<multiply>(2, 4.5)=9.00<eoe>",
+                "<multiply>(19.5, 4)=78.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(2, 3.50)=7.00",
+                "<multiply>(2, 4.50)=9.00",
+                "<multiply>(19.50, 4)=78.00"
+            ]
+        },
+        {
+            "index": 4674,
+            "original": [
+                "<multiply>(0.25, 24)=6<eoe>",
+                "<multiply>(0.5, 20)=10<eoe>",
+                "<multiply>(1, 12)=12<eoe>",
+                "<add>(6, 10, 12)=28<eoe>"
+            ],
+            "processed": [
+                "<multiply>(0.25, 24)=6",
+                "<multiply>(0.50, 20)=10",
+                "<multiply>(1, 12)=12",
+                "<add>(6, 10, 12)=28"
+            ]
+        },
+        {
+            "index": 4707,
+            "original": [
+                "<divide>(10, 0.1)=100<eoe>",
+                "<divide>(100, 2)=50<eoe>",
+                "<add>(50, 2)=52<eoe>"
+            ],
+            "processed": [
+                "<divide>(10, 0.10)=100",
+                "<divide>(100, 2)=50",
+                "<add>(50, 2)=52"
+            ]
+        },
+        {
+            "index": 4726,
+            "original": [
+                "<multiply>(8, 8.5)=68<eoe>",
+                "<multiply>(20, 68)=1360<eoe>",
+                "<multiply>(12, 1360)=16320<eoe>"
+            ],
+            "processed": [
+                "<multiply>(8, 8.50)=68",
+                "<multiply>(20, 68)=1360",
+                "<multiply>(12, 1360)=16320"
+            ]
+        },
+        {
+            "index": 4755,
+            "original": [
+                "<subtract>(200, 30)=170<eoe>",
+                "<multiply>(170, 0.2)=34<eoe>",
+                "<subtract>(170, 34)=136<eoe>"
+            ],
+            "processed": [
+                "<subtract>(200, 30)=170",
+                "<multiply>(170, 0.20)=34",
+                "<subtract>(170, 34)=136"
+            ]
+        },
+        {
+            "index": 4779,
+            "original": [
+                "<multiply>(3, 2)=6<eoe>",
+                "<add>(6, 2)=8<eoe>",
+                "<multiply>(2, 2)=4<eoe>",
+                "<add>(4, 4)=8<eoe>",
+                "<add>(8, 8)=16<eoe>"
+            ],
+            "processed": [
+                "<multiply>(3, 2)=6",
+                "<add>(6, 2)=8",
+                "<multiply>(2, 2)=4",
+                "<multiply>(2, 2)=4",
+                "<add>(4, 4)=8",
+                "<add>(8, 8)=16"
+            ]
+        },
+        {
+            "index": 4794,
+            "original": [
+                "<divide>(30, 2)=15<eoe>",
+                "<multiply>(0.25, 28)=7<eoe>",
+                "<multiply>(0.25, 60)=15<eoe>",
+                "<add>(7, 15)=22<eoe>",
+                "<divide>(22, 11)=2<eoe>"
+            ],
+            "processed": [
+                "<divide>(30, 2)=15",
+                "<multiply>(.25, 28)=7",
+                "<multiply>(.25, 60)=15",
+                "<add>(7, 15)=22",
+                "<divide>(22, 11)=2"
+            ]
+        },
+        {
+            "index": 4814,
+            "original": [
+                "<multiply>(150, 2)=300<eoe>",
+                "<divide>(300, 15)=20<eoe>",
+                "<multiply>(0.9, 20)=18<eoe>",
+                "<add>(50, 18)=68<eoe>",
+                "<subtract>(90, 68)=22<eoe>"
+            ],
+            "processed": [
+                "<multiply>(150, 2)=300",
+                "<divide>(300, 15)=20",
+                "<multiply>(0.90, 20)=18",
+                "<add>(50, 18)=68",
+                "<subtract>(90, 68)=22"
+            ]
+        },
+        {
+            "index": 4824,
+            "original": [
+                "<multiply>(20, 0.01, 500)=100<eoe>",
+                "<subtract>(500, 100)=400<eoe>",
+                "<subtract>(400, 100)=300<eoe>",
+                "<multiply>(30, 0.01, 500)=150<eoe>",
+                "<subtract>(300, 150)=150<eoe>"
+            ],
+            "processed": [
+                "<multiply>(20, 0.01, 500)=100",
+                "<subtract>(500, 100)=400",
+                "<multiply>(20, 0.01, 500)=100",
+                "<subtract>(400, 100)=300",
+                "<multiply>(30, 0.01, 500)=150",
+                "<subtract>(300, 150)=150"
+            ]
+        },
+        {
+            "index": 4951,
+            "original": [
+                "<multiply>(850, 0.2)=170<eoe>",
+                "<subtract>(850, 170)=680<eoe>",
+                "<multiply>(1100, 0.3)=330<eoe>",
+                "<subtract>(1100, 330)=770<eoe>",
+                "<subtract>(770, 680)=90<eoe>"
+            ],
+            "processed": [
+                "<multiply>(850, 0.20)=170",
+                "<subtract>(850, 170)=680",
+                "<multiply>(1100, 0.30)=330",
+                "<subtract>(1100, 330)=770",
+                "<subtract>(770, 680)=90"
+            ]
+        },
+        {
+            "index": 4966,
+            "original": [
+                "<add>(2.4, 9.2, 6.5)=18.10<eoe>",
+                "<subtract>(18.1, 7.1)=11<eoe>"
+            ],
+            "processed": [
+                "<add>(2.4, 9.2, 6.5)=18.10",
+                "<subtract>(18.10, 7.10)=11"
+            ]
+        },
+        {
+            "index": 5032,
+            "original": [
+                "<multiply>(5, 0.8)=4.00<eoe>",
+                "<add>(4, 5)=9.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(5, 0.80)=4.00",
+                "<add>(4, 5)=9.00"
+            ]
+        },
+        {
+            "index": 5034,
+            "original": [
+                "<multiply>(2, 2.25)=4.50<eoe>",
+                "<multiply>(2, 4)=8.00<eoe>",
+                "<multiply>(2, 2.5)=5.00<eoe>",
+                "<add>(4.5, 8.0, 0.5, 5.0, 3.5, 3.5)=25.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(2, 2.25)=4.50",
+                "<multiply>(2, 4)=8.00",
+                "<multiply>(2, 2.50)=5.00",
+                "<add>(4.50, 8.00, 0.50, 5.00, 3.50, 3.50)=25.00"
+            ]
+        },
+        {
+            "index": 5086,
+            "original": [
+                "<multiply>(0.7, 200)=140<eoe>",
+                "<add>(140, 20)=160<eoe>"
+            ],
+            "processed": [
+                "<multiply>(.70, 200)=140",
+                "<add>(140, 20)=160"
+            ]
+        },
+        {
+            "index": 5112,
+            "original": [
+                "<multiply>(0.1, 80)=8.00<eoe>",
+                "<subtract>(15, 8)=7.00<eoe>",
+                "<divide>(7, 0.05)=140<eoe>"
+            ],
+            "processed": [
+                "<multiply>(0.10, 80)=8.00",
+                "<subtract>(15, 8)=7.00",
+                "<divide>(7, 0.05)=140"
+            ]
+        },
+        {
+            "index": 5113,
+            "original": [
+                "<multiply>(6, 3)=18<eoe>",
+                "<add>(18, 18)=36<eoe>"
+            ],
+            "processed": [
+                "<multiply>(6, 3)=18",
+                "<multiply>(6, 3)=18",
+                "<add>(18, 18)=36"
+            ]
+        },
+        {
+            "index": 5159,
+            "original": [
+                "<divide>(30, 3)=10<eoe>",
+                "<divide>(20, 10)=2<eoe>",
+                "<multiply>(2, 10)=20<eoe>",
+                "<divide>(80, 20)=4<eoe>",
+                "<add>(20, 4)=24<eoe>"
+            ],
+            "processed": [
+                "<divide>(30, 3)=10",
+                "<divide>(20, 10)=2",
+                "<multiply>(2, 10)=20",
+                "<multiply>(2, 10)=20",
+                "<divide>(80, 20)=4",
+                "<add>(20, 4)=24"
+            ]
+        },
+        {
+            "index": 5184,
+            "original": [
+                "<multiply>(30, 0.5)=15<eoe>",
+                "<multiply>(40, 0.5)=20<eoe>",
+                "<add>(20, 15)=35<eoe>"
+            ],
+            "processed": [
+                "<multiply>(30, 0.50)=15",
+                "<multiply>(40, 0.50)=20",
+                "<add>(20, 15)=35"
+            ]
+        },
+        {
+            "index": 5296,
+            "original": [
+                "<multiply>(2, 3)=6<eoe>",
+                "<divide>(6, 1)=6<eoe>",
+                "<multiply>(2, 6)=12<eoe>",
+                "<divide>(12, 3)=4<eoe>",
+                "<add>(4, 6)=10<eoe>"
+            ],
+            "processed": [
+                "<multiply>(2, 3)=6",
+                "<divide>(6, 1)=6",
+                "<multiply>(2, 3)=6",
+                "<multiply>(2, 6)=12",
+                "<divide>(12, 3)=4",
+                "<add>(4, 6)=10"
+            ]
+        },
+        {
+            "index": 5334,
+            "original": [
+                "<divide>(100, 2)=50<eoe>",
+                "<subtract>(100, 50)=50<eoe>",
+                "<multiply>(20, 0.01, 50)=10<eoe>",
+                "<multiply>(0.1, 50)=5<eoe>",
+                "<add>(10, 5)=15<eoe>"
+            ],
+            "processed": [
+                "<divide>(100, 2)=50",
+                "<subtract>(100, 50)=50",
+                "<multiply>(20, 0.01, 50)=10",
+                "<multiply>(.10, 50)=5",
+                "<add>(10, 5)=15"
+            ]
+        },
+        {
+            "index": 5381,
+            "original": [
+                "<divide>(30, 0.5)=60<eoe>",
+                "<multiply>(2, 60)=120<eoe>",
+                "<multiply>(3, 120)=360<eoe>",
+                "<add>(120, 360)=480<eoe>"
+            ],
+            "processed": [
+                "<divide>(30, 0.50)=60",
+                "<multiply>(2, 60)=120",
+                "<multiply>(3, 120)=360",
+                "<add>(120, 360)=480"
+            ]
+        },
+        {
+            "index": 5449,
+            "original": [
+                "<multiply>(4, 5)=20<eoe>",
+                "<subtract>(14, 12)=2<eoe>",
+                "<multiply>(2, 0.5)=1.00<eoe>",
+                "<add>(20, 4, 1)=25.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(4, 5)=20",
+                "<subtract>(14, 12)=2",
+                "<multiply>(2, 0.50)=1.00",
+                "<add>(20, 4, 1)=25.00"
+            ]
+        },
+        {
+            "index": 5455,
+            "original": [
+                "<multiply>(0.2, 40000)=8000<eoe>",
+                "<add>(40000, 8000)=48000<eoe>",
+                "<add>(48000, 40000)=88000<eoe>",
+                "<multiply>(2, 1000)=2000<eoe>",
+                "<multiply>(2000, 100)=200000<eoe>",
+                "<subtract>(200000, 88000)=112000<eoe>"
+            ],
+            "processed": [
+                "<multiply>(.2, 40000)=8000",
+                "<add>(40000, 8000)=48000",
+                "<add>(48000, 40000)=88000",
+                "<multiply>(2, 1000)=2000",
+                "<multiply>(2000, 100)=200000",
+                "<subtract>(200000, 88000)=112000"
+            ]
+        },
+        {
+            "index": 5475,
+            "original": [
+                "<multiply>(100, 0.8)=80<eoe>",
+                "<subtract>(100, 80)=20<eoe>",
+                "<add>(20, 5)=25<eoe>",
+                "<multiply>(25, 0.2)=5<eoe>",
+                "<add>(25, 5)=30<eoe>"
+            ],
+            "processed": [
+                "<multiply>(100, 0.80)=80",
+                "<subtract>(100, 80)=20",
+                "<add>(20, 5)=25",
+                "<multiply>(25, 0.20)=5",
+                "<add>(25, 5)=30"
+            ]
+        },
+        {
+            "index": 5496,
+            "original": [
+                "<multiply>(0.1, 12)=1.2<eoe>",
+                "<subtract>(26, 2)=24<eoe>",
+                "<divide>(24, 1.2)=20<eoe>",
+                "<add>(12, 20)=32<eoe>"
+            ],
+            "processed": [
+                "<multiply>((0.1), 12)=1.2",
+                "<subtract>(26, 2)=24",
+                "<divide>(24, 1.2)=20",
+                "<add>(12, 20)=32"
+            ]
+        },
+        {
+            "index": 5501,
+            "original": [
+                "<multiply>(2, 2)=4<eoe>",
+                "<multiply>(2, 3)=6<eoe>",
+                "<multiply>(1, 3)=3<eoe>",
+                "<add>(4, 6, 4, 3)=17<eoe>"
+            ],
+            "processed": [
+                "<multiply>(2, 2)=4",
+                "<multiply>(2, 3)=6",
+                "<multiply>(2, 2)=4",
+                "<multiply>(1, 3)=3",
+                "<add>(4, 6, 4, 3)=17"
+            ]
+        },
+        {
+            "index": 5544,
+            "original": [
+                "<divide>(3, 2)=1.50<eoe>",
+                "<divide>(10, 5)=2<eoe>",
+                "<subtract>(2, 1.5)=0.50<eoe>",
+                "<multiply>(0.5, 5)=2.50<eoe>",
+                "<divide>(2.7, 3)=0.90<eoe>",
+                "<subtract>(1, 0.9)=0.10<eoe>",
+                "<multiply>(0.1, 5)=0.50<eoe>"
+            ],
+            "processed": [
+                "<divide>(3, 2)=1.50",
+                "<divide>(10, 5)=2",
+                "<subtract>(2, 1.5)=0.50",
+                "<multiply>(0.50, 5)=2.50",
+                "<divide>(2.7, 3)=0.90",
+                "<subtract>(1, 0.9)=0.10",
+                "<multiply>(0.10, 5)=0.50"
+            ]
+        },
+        {
+            "index": 5603,
+            "original": [
+                "<add>(0.4, 0.85)=1.25<eoe>",
+                "<add>(1.25, 0.5)=1.75<eoe>",
+                "<subtract>(1.75, 1.6)=0.15<eoe>",
+                "<multiply>(100, 0.15)=15<eoe>"
+            ],
+            "processed": [
+                "<add>(0.40, 0.85)=1.25",
+                "<add>(1.25, 0.5)=1.75",
+                "<subtract>(1.75, 1.6)=0.15",
+                "<multiply>(100, 0.15)=15"
+            ]
+        },
+        {
+            "index": 5626,
+            "original": [
+                "<divide>(12, 2)=6<eoe>",
+                "<multiply>(6, 3)=18<eoe>",
+                "<multiply>(18, 1.5)=27<eoe>",
+                "<add>(6, 18, 27)=51<eoe>",
+                "<add>(12, 51)=63<eoe>"
+            ],
+            "processed": [
+                "<divide>(12, 2)=6",
+                "<multiply>(6, 3)=18",
+                "<multiply>(18, 1.50)=27",
+                "<add>(6, 18, 27)=51",
+                "<add>(12, 51)=63"
+            ]
+        },
+        {
+            "index": 5631,
+            "original": [
+                "<multiply>(2, 3.5)=7.00<eoe>",
+                "<multiply>(1.5, 2)=3.00<eoe>",
+                "<add>(7, 1.5, 1, 3, 2.5)=15.00<eoe>",
+                "<subtract>(15, 1)=14.00<eoe>",
+                "<subtract>(20, 14)=6.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(2, 3.50)=7.00",
+                "<multiply>(1.5, 2)=3.00",
+                "<add>(7, 1.50, 1, 3, 2.50)=15.00",
+                "<subtract>(15, 1)=14.00",
+                "<subtract>(20, 14)=6.00"
+            ]
+        },
+        {
+            "index": 5656,
+            "original": [
+                "<multiply>(0.6, 2)=1.20<eoe>",
+                "<divide>(12, 1.2)=10<eoe>"
+            ],
+            "processed": [
+                "<multiply>(0.60, 2)=1.20",
+                "<divide>(12, 1.20)=10"
+            ]
+        },
+        {
+            "index": 5669,
+            "original": [
+                "<multiply>(0.5, 40)=20<eoe>",
+                "<divide>(60, 4)=15<eoe>",
+                "<subtract>(20, 15)=5<eoe>"
+            ],
+            "processed": [
+                "<multiply>(0.50, 40)=20",
+                "<divide>(60, 4)=15",
+                "<subtract>(20, 15)=5"
+            ]
+        },
+        {
+            "index": 5693,
+            "original": [
+                "<multiply>(70, 0.2)=14<eoe>",
+                "<subtract>(70, 14)=56<eoe>",
+                "<divide>(56, 2)=28<eoe>",
+                "<subtract>(56, 28)=28<eoe>"
+            ],
+            "processed": [
+                "<multiply>(70, 0.20)=14",
+                "<subtract>(70, 14)=56",
+                "<divide>(56, 2)=28",
+                "<subtract>(56, 28)=28"
+            ]
+        },
+        {
+            "index": 5694,
+            "original": [
+                "<multiply>(100, 0.4)=40<eoe>",
+                "<multiply>(0.2, 40)=8<eoe>"
+            ],
+            "processed": [
+                "<multiply>(100, 0.40)=40",
+                "<multiply>(.20, 40)=8"
+            ]
+        },
+        {
+            "index": 5701,
+            "original": [
+                "<multiply>(15, 2)=30<eoe>",
+                "<divide>(30, 60)=.5<eoe>",
+                "<divide>(4, 0.5)=8<eoe>"
+            ],
+            "processed": [
+                "<multiply>(15, 2)=30",
+                "<divide>(30, 60)=0.5",
+                "<divide>(4, 0.5)=8"
+            ]
+        },
+        {
+            "index": 5747,
+            "original": [
+                "<multiply>(15, 0.2)=3.00<eoe>",
+                "<subtract>(15.0, 3)=12.00<eoe>",
+                "<multiply>(3, 2)=6.00<eoe>",
+                "<multiply>(3, 12)=36.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(15, 0.20)=3.00",
+                "<subtract>(15.00, 3)=12.00",
+                "<multiply>(3, 2)=6.00",
+                "<multiply>(3, 12)=36.00"
+            ]
+        },
+        {
+            "index": 5771,
+            "original": [
+                "<multiply>(2, 20)=40<eoe>",
+                "<multiply>(4, 10)=40<eoe>",
+                "<add>(40, 40)=80<eoe>",
+                "<subtract>(90, 80)=10<eoe>",
+                "<divide>(10, 1, 2)=20<eoe>"
+            ],
+            "processed": [
+                "<multiply>(2, 20)=40",
+                "<multiply>(4, 10)=40",
+                "<add>(40, 40)=80",
+                "<subtract>(90, 80)=10",
+                "<divide>(10, (1, 2))=20"
+            ]
+        },
+        {
+            "index": 5773,
+            "original": [
+                "<multiply>(30, 0.2)=6.00<eoe>",
+                "<subtract>(30, 6)=24.00<eoe>",
+                "<multiply>(5, 24)=120.00<eoe>",
+                "<multiply>(5, 25)=125.00<eoe>",
+                "<add>(120, 125)=245.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(30, 0.20)=6.00",
+                "<subtract>(30, 6)=24.00",
+                "<multiply>(5, 24)=120.00",
+                "<multiply>(5, 25)=125.00",
+                "<add>(120, 125)=245.00"
+            ]
+        },
+        {
+            "index": 5791,
+            "original": [
+                "<multiply>(3, 0.5)=1.50<eoe>",
+                "<add>(1.5, 2)=3.50<eoe>",
+                "<multiply>(8, 3.5)=28.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(3, 0.50)=1.50",
+                "<add>(1.5, 2)=3.50",
+                "<multiply>(8, 3.5)=28.00"
+            ]
+        },
+        {
+            "index": 5802,
+            "original": [
+                "<divide>(200, 5)=40<eoe>",
+                "<divide>(200, 4)=50<eoe>",
+                "<subtract>(50, 40)=10<eoe>"
+            ],
+            "processed": [
+                "<divide>(200, 5)=40",
+                "<divide>(200, 4)=50",
+                "<subtract>((50, 40))=10"
+            ]
+        },
+        {
+            "index": 5811,
+            "original": [
+                "<multiply>(0.75, 4)=3.00<eoe>",
+                "<divide>(3.0, 0.5)=6<eoe>"
+            ],
+            "processed": [
+                "<multiply>(.75, 4)=3.00",
+                "<divide>(3.00, 0.50)=6"
+            ]
+        },
+        {
+            "index": 5833,
+            "original": [
+                "<divide>(200, 2)=100<eoe>",
+                "<multiply>(100, 0.3)=30<eoe>",
+                "<multiply>(30, 4)=120<eoe>"
+            ],
+            "processed": [
+                "<divide>(200, 2)=100",
+                "<multiply>(100, 0.30)=30",
+                "<multiply>(30, 4)=120"
+            ]
+        },
+        {
+            "index": 5861,
+            "original": [
+                "<divide>(10, 2)=5.00<eoe>",
+                "<multiply>(5.0, 8)=40.00<eoe>",
+                "<add>(43, 40)=83.00<eoe>"
+            ],
+            "processed": [
+                "<divide>(10, 2)=5.00",
+                "<multiply>(5.00, 8)=40.00",
+                "<add>(43, 40)=83.00"
+            ]
+        },
+        {
+            "index": 5930,
+            "original": [
+                "<multiply>(4, 50)=200<eoe>",
+                "<divide>(200, 100)=2<eoe>"
+            ],
+            "processed": [
+                "<multiply>(4, 50)=200",
+                "<divide>(200, (100))=2"
+            ]
+        },
+        {
+            "index": 5943,
+            "original": [
+                "<multiply>(4, 1)=4<eoe>",
+                "<multiply>(4, 52)=208<eoe>",
+                "<multiply>(5.5, 2)=11.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(4, 1)=4",
+                "<multiply>(4, 52)=208",
+                "<multiply>(5.50, 2)=11.00"
+            ]
+        },
+        {
+            "index": 5979,
+            "original": [
+                "<multiply>(76, 0.25)=19.00<eoe>",
+                "<multiply>(85, 0.1)=8.50<eoe>",
+                "<multiply>(20, 0.05)=1.00<eoe>",
+                "<multiply>(150, 0.01)=1.50<eoe>",
+                "<add>(19, 8.5, 1, 1.5)=30.00<eoe>",
+                "<subtract>(30, 3)=27.00<eoe>"
+            ],
+            "processed": [
+                "<multiply>(76, 0.25)=19.00",
+                "<multiply>(85, 0.10)=8.50",
+                "<multiply>(20, 0.05)=1.00",
+                "<multiply>(150, 0.01)=1.50",
+                "<add>(19, 8.5, 1, 1.5)=30.00",
+                "<subtract>(30, 3)=27.00"
+            ]
+        },
+        {
+            "index": 6005,
+            "original": [
+                "<divide>(5, 2)=2.5<eoe>",
+                "<multiply>(1, 0.5)=.5<eoe>",
+                "<add>(5, 2.5, 0.5)=8<eoe>",
+                "<divide>(8, 2)=4<eoe>"
+            ],
+            "processed": [
+                "<divide>(5, 2)=2.5",
+                "<multiply>(1, 0.5)=0.5",
+                "<add>(5, 2.5, 0.5)=8",
+                "<divide>(8, 2)=4"
+            ]
+        },
+        {
+            "index": 6016,
+            "original": [
+                "<multiply>(1.2, 50)=60<eoe>",
+                "<subtract>(60, 50)=10<eoe>"
+            ],
+            "processed": [
+                "<multiply>(1.20, 50)=60",
+                "<subtract>(60, 50)=10"
+            ]
+        },
+        {
+            "index": 6039,
+            "original": [
+                "<divide>(900, 3)=300<eoe>",
+                "<multiply>(300, 2)=600<eoe>",
+                "<divide>(300, 2)=150<eoe>",
+                "<add>(600, 600, 150)=1350<eoe>"
+            ],
+            "processed": [
+                "<divide>(900, 3)=300",
+                "<multiply>(300, 2)=600",
+                "<multiply>(300, 2)=600",
+                "<divide>(300, 2)=150",
+                "<add>(600, 600, 150)=1350"
+            ]
+        }
+    ],
+    "tar_number_mismatches": [
+        {
+            "index": 57,
+            "original": [
+                "2",
+                "1",
+                "6",
+                "15"
+            ],
+            "processed": [
+                "2",
+                "1",
+                "6",
+                "6",
+                "15"
+            ]
+        },
+        {
+            "index": 112,
+            "original": [
+                "40",
+                "80",
+                "120",
+                "2"
+            ],
+            "processed": [
+                "40",
+                "40",
+                "80",
+                "120",
+                "2"
+            ]
+        },
+        {
+            "index": 259,
+            "original": [
+                "4",
+                "8",
+                "22"
+            ],
+            "processed": [
+                "4",
+                "8",
+                "4",
+                "22"
+            ]
+        },
+        {
+            "index": 260,
+            "original": [
+                "2",
+                "6.00",
+                "10.00",
+                "4",
+                "20.00"
+            ],
+            "processed": [
+                "2",
+                "6.00",
+                "2",
+                "10.00",
+                "4",
+                "20.00"
+            ]
+        },
+        {
+            "index": 299,
+            "original": [
+                "3",
+                "6"
+            ],
+            "processed": [
+                "3",
+                "3",
+                "6"
+            ]
+        },
+        {
+            "index": 520,
+            "original": [
+                "30",
+                "20",
+                "15",
+                "80"
+            ],
+            "processed": [
+                "30",
+                "20",
+                "15",
+                "30",
+                "80"
+            ]
+        },
+        {
+            "index": 661,
+            "original": [
+                "50",
+                "345"
+            ],
+            "processed": [
+                "50",
+                "50",
+                "345"
+            ]
+        },
+        {
+            "index": 848,
+            "original": [
+                "2",
+                "8"
+            ],
+            "processed": [
+                "2",
+                "8",
+                "8"
+            ]
+        },
+        {
+            "index": 941,
+            "original": [
+                "10",
+                "10",
+                "5.00",
+                "15.00",
+                "90",
+                "45.00",
+                "75.00"
+            ],
+            "processed": [
+                "10.00",
+                "10",
+                "5.00",
+                "15.00",
+                "90",
+                "45.00",
+                "75.00"
+            ]
+        },
+        {
+            "index": 948,
+            "original": [
+                "9",
+                "2.00",
+                "18.00",
+                "162",
+                "45.00",
+                "207.00"
+            ],
+            "processed": [
+                "9",
+                "2.00",
+                "18.00",
+                "162.00",
+                "45.00",
+                "207.00"
+            ]
+        },
+        {
+            "index": 991,
+            "original": [
+                "10",
+                "5",
+                "200",
+                "25",
+                "125",
+                "50",
+                "375"
+            ],
+            "processed": [
+                "10",
+                "5",
+                "200",
+                "25",
+                "125",
+                "10",
+                "50",
+                "375"
+            ]
+        },
+        {
+            "index": 994,
+            "original": [
+                "6",
+                "11",
+                "3",
+                "19"
+            ],
+            "processed": [
+                "6",
+                "6",
+                "11",
+                "3",
+                "19"
+            ]
+        },
+        {
+            "index": 1099,
+            "original": [
+                "24",
+                "22",
+                "22",
+                "72",
+                "118"
+            ],
+            "processed": [
+                "24",
+                "22",
+                "22",
+                "24",
+                "72",
+                "118"
+            ]
+        },
+        {
+            "index": 1405,
+            "original": [
+                "500",
+                "1000",
+                "1000",
+                "2000"
+            ],
+            "processed": [
+                "500",
+                "500",
+                "1000",
+                "1000",
+                "2000"
+            ]
+        },
+        {
+            "index": 1562,
+            "original": [
+                "8",
+                "2",
+                "12",
+                "24",
+                "8",
+                "4"
+            ],
+            "processed": [
+                "8",
+                "2",
+                "2",
+                "12",
+                "24",
+                "8",
+                "4"
+            ]
+        },
+        {
+            "index": 1585,
+            "original": [
+                "12",
+                "60.00",
+                "125.00"
+            ],
+            "processed": [
+                "12",
+                "60.00",
+                "60.00",
+                "125.00"
+            ]
+        },
+        {
+            "index": 1590,
+            "original": [
+                "6",
+                "24",
+                "36",
+                "18"
+            ],
+            "processed": [
+                "6",
+                "6",
+                "24",
+                "36",
+                "18"
+            ]
+        },
+        {
+            "index": 1629,
+            "original": [
+                "800",
+                "1600"
+            ],
+            "processed": [
+                "800",
+                "800",
+                "1600"
+            ]
+        },
+        {
+            "index": 2232,
+            "original": [
+                "30",
+                "20",
+                "60",
+                "40",
+                "130"
+            ],
+            "processed": [
+                "30",
+                "20",
+                "60",
+                "40",
+                "30",
+                "130"
+            ]
+        },
+        {
+            "index": 2679,
+            "original": [
+                "200",
+                "250",
+                "650"
+            ],
+            "processed": [
+                "200",
+                "250",
+                "200",
+                "650"
+            ]
+        },
+        {
+            "index": 2724,
+            "original": [
+                "18",
+                "27",
+                "45"
+            ],
+            "processed": [
+                "18",
+                "18",
+                "27",
+                "45"
+            ]
+        },
+        {
+            "index": 2882,
+            "original": [
+                "5"
+            ],
+            "processed": [
+                "5",
+                "5"
+            ]
+        },
+        {
+            "index": 2932,
+            "original": [
+                "12",
+                "18",
+                "36",
+                "66"
+            ],
+            "processed": [
+                "12",
+                "18",
+                "18",
+                "36",
+                "66"
+            ]
+        },
+        {
+            "index": 3207,
+            "original": [
+                "24",
+                "16",
+                "12",
+                "36"
+            ],
+            "processed": [
+                "24",
+                "16",
+                "12",
+                "24",
+                "36"
+            ]
+        },
+        {
+            "index": 3379,
+            "original": [
+                "12",
+                "4",
+                "16",
+                "20"
+            ],
+            "processed": [
+                "12",
+                "4",
+                "16",
+                "4",
+                "20"
+            ]
+        },
+        {
+            "index": 3382,
+            "original": [
+                "24",
+                "48",
+                "96"
+            ],
+            "processed": [
+                "24",
+                "48",
+                "48",
+                "96"
+            ]
+        },
+        {
+            "index": 3490,
+            "original": [
+                "6",
+                "24",
+                "21",
+                "51"
+            ],
+            "processed": [
+                "6",
+                "6",
+                "24",
+                "21",
+                "51"
+            ]
+        },
+        {
+            "index": 3771,
+            "original": [
+                "2",
+                "4",
+                "8",
+                "1"
+            ],
+            "processed": [
+                "2",
+                "4",
+                "8",
+                "4",
+                "1"
+            ]
+        },
+        {
+            "index": 3879,
+            "original": [
+                "2",
+                "3",
+                "4",
+                "8",
+                "12",
+                "32"
+            ],
+            "processed": [
+                "2",
+                "3",
+                "4",
+                "8",
+                "8",
+                "12",
+                "32"
+            ]
+        },
+        {
+            "index": 4148,
+            "original": [
+                "60",
+                "78.00"
+            ],
+            "processed": [
+                "60.00",
+                "78.00"
+            ]
+        },
+        {
+            "index": 4285,
+            "original": [
+                "9",
+                "18",
+                "48"
+            ],
+            "processed": [
+                "9",
+                "18",
+                "18",
+                "48"
+            ]
+        },
+        {
+            "index": 4460,
+            "original": [
+                "6",
+                "360",
+                "270"
+            ],
+            "processed": [
+                "6",
+                "360",
+                "6",
+                "270"
+            ]
+        },
+        {
+            "index": 4779,
+            "original": [
+                "6",
+                "8",
+                "4",
+                "8",
+                "16"
+            ],
+            "processed": [
+                "6",
+                "8",
+                "4",
+                "4",
+                "8",
+                "16"
+            ]
+        },
+        {
+            "index": 4824,
+            "original": [
+                "100",
+                "400",
+                "300",
+                "150",
+                "150"
+            ],
+            "processed": [
+                "100",
+                "400",
+                "100",
+                "300",
+                "150",
+                "150"
+            ]
+        },
+        {
+            "index": 5113,
+            "original": [
+                "18",
+                "36"
+            ],
+            "processed": [
+                "18",
+                "18",
+                "36"
+            ]
+        },
+        {
+            "index": 5159,
+            "original": [
+                "10",
+                "2",
+                "20",
+                "4",
+                "24"
+            ],
+            "processed": [
+                "10",
+                "2",
+                "20",
+                "20",
+                "4",
+                "24"
+            ]
+        },
+        {
+            "index": 5296,
+            "original": [
+                "6",
+                "6",
+                "12",
+                "4",
+                "10"
+            ],
+            "processed": [
+                "6",
+                "6",
+                "6",
+                "12",
+                "4",
+                "10"
+            ]
+        },
+        {
+            "index": 5501,
+            "original": [
+                "4",
+                "6",
+                "3",
+                "17"
+            ],
+            "processed": [
+                "4",
+                "6",
+                "4",
+                "3",
+                "17"
+            ]
+        },
+        {
+            "index": 6039,
+            "original": [
+                "300",
+                "600",
+                "150",
+                "1350"
+            ],
+            "processed": [
+                "300",
+                "600",
+                "600",
+                "150",
+                "1350"
+            ]
+        }
+    ]
+}
