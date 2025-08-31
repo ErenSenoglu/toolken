@@ -12,6 +12,8 @@ def parse_answer(answer, pattern:str="####"):
         answer = answer.strip().strip("\n").strip('\\n')
         # 32,333 -> 32333
         answer = answer.replace(",", "")
+    elif pattern == "*":
+        return -1
 
         # get the last number
         try:

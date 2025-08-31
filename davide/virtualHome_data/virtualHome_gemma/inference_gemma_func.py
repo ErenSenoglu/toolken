@@ -395,6 +395,28 @@ def func_infer_one(
         "status": "success",
     }
 
+def extract_tags(s: str):
+    """Extract tags of the form [TAGNAME] from string."""
+    return re.findall(r"\[[A-Z]+\]", s)
+
+def action_accuracy(pred, gold, type="em"):
+    assert len(pred) == len(gold), "Pred and gold must have same length"
+    
+    accuracies = []
+    for p, g in zip(pred, gold):
+        pred_tags = extract_tags(p)
+        gold_tags = extract_tags(g)
+
+        if not gold_tags:  # no tags in gold → perfect match if pred also has none
+            acc = 1.0 if not pred_tags else 0.0
+        else:
+            matches = sum(pt == gt for pt, gt in zip(pred_tags, gold_tags))
+            acc = matches / len(gold_tags)
+        
+        accuracies.append(acc)
+    
+    return sum(accuracies) / len(accuracies)
+    
 
 def main(
     model_name_or_path: str = "google/gemma-3-4b-pt",
@@ -482,8 +504,8 @@ def main(
                 op_arg_retry_limit=op_arg_retry_limit,
             )
             gen = log["generation"]
-            pv = parse_answer(gen, pattern="####")
-            preds.append(pv)
+            pv = parse_answer(gen, pattern="*")
+            preds.append(gen)
             rec = {
                 "index": i,
                 "question": q,
@@ -500,8 +522,11 @@ def main(
     dur = time.time() - t0
     if preds:
         new_labels = [labels[i] for i in remaining_indices]
-        em = accuracy(preds, new_labels, type="em")
-        approx = accuracy(preds, new_labels, type="approx")
+        #em = accuracy(preds, new_labels, type="em")
+        #approx = accuracy(preds, new_labels, type="approx")
+
+        em = action_accuracy(preds, new_labels, type="em")
+        approx = action_accuracy(preds, new_labels, type="approx")
         print(f"[DONE] Saved outputs to {out_path} | EM(new)={em:.4f} | approx(new)={approx:.4f} | n_new={len(preds)} | time={dur:.1f}s")
     else:
         print(f"[DONE] Saved outputs to {out_path} | No new items processed | time={dur:.1f}s")
