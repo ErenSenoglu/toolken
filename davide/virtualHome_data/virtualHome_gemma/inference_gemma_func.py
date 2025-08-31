@@ -88,7 +88,7 @@ class FunctionHeadOnlyLight(nn.Module):
 
 
 def read_templates(dataset: str) -> Dict[str, str]:
-    tdir = f"data/{dataset}/template"
+    tdir = f"data/{dataset}_template"
     templates: Dict[str, str] = {}
     for name in os.listdir(tdir):
         with open(os.path.join(tdir, name), "r", encoding="utf-8") as f:
@@ -105,7 +105,8 @@ def load_func_dict(dataset: str) -> Dict[str, int]:
 def build_questions(dataset: str) -> Tuple[List[str], List[float]]:
     test_path = f"data/{dataset}_test.json"
     with open(test_path, "r", encoding="utf-8") as f:
-        data = [json.loads(line) for line in f]
+        #data = [json.loads(line) for line in f]
+        data = json.load(f)
     questions: List[str] = []
     #labels: List[float] = []
     labels: List[str] = []
