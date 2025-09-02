@@ -1,0 +1,11 @@
+Question: Task 4:\nI am in ['dining_room']. The objects I can manipulate are ['chair', 'button', 'mouse', 'bedroom', 'plate', 'home_office', 'food_food', 'freezer', 'keyboard', 'faucet', 'television', 'light', 'couch', 'desk', 'phone', 'computer', 'table', 'dining_room', 'sink', 'bathroom', 'bed'].\nGoal:\nBrowse internet\nHint:\nI go to my desk. I turn on the computer. I open a web page and look at it.\n
+Answer: Plan:\n[WALK] <home_office>\n[WALK] <computer>\n[FIND] <computer>\n[SWITCHON] <computer>\n[TURNTO] <computer>\n[LOOKAT] <computer>\n[END]
+
+Question: Task 4:\nI am in ['bathroom']. The objects I can manipulate are ['check', 'chair', 'mouse', 'cupboard', 'bedroom', 'home_office', 'food_food', 'freezer', 'keyboard', 'faucet', 'television', 'novel', 'light', 'couch', 'desk', 'phone', 'computer', 'table', 'dining_room', 'sink', 'bathroom', 'bed'].\nGoal:\nBrowse internet\nHint:\nBrowsing the world wide web for entertainment
+Answer: Plan:\n[WALK] <home_office>\n[WALK] <chair>\n[FIND] <chair>\n[SIT] <chair>\n[FIND] <computer>\n[SWITCHON] <computer>\n[FIND] <mouse>\n[TOUCH] <mouse>\n[FIND] <keyboard>\n[TYPE] <keyboard>\n[END]
+
+Question: Task 4:\nI am in ['bedroom']. The objects I can manipulate are ['check', 'chair', 'mouse', 'cupboard', 'bedroom', 'home_office', 'food_food', 'freezer', 'keyboard', 'faucet', 'television', 'novel', 'light', 'couch', 'remote_control', 'desk', 'phone', 'computer', 'table', 'dining_room', 'sink', 'bathroom', 'bed'].\nGoal:\nWatch TV\nHint:\nI walk into my living room, find the remote and sit on my sofa. I look at the remote and switch on the television. I look at the Television.
+Answer: Plan:\n[WALK] <home_office>\n[WALK] <remote_control>\n[FIND] <remote_control>\n[FIND] <couch>\n[SIT] <couch>\n[TURNTO] <remote_control>\n[LOOKAT] <remote_control>\n[FIND] <television>\n[SWITCHON] <television>\n[TURNTO] <television>\n[LOOKAT] <television>\n[END]
+
+Question: [QUESTION]
+Answer:

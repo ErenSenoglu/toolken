@@ -419,7 +419,7 @@ def action_accuracy(pred, gold, type="em"):
     
 
 def main(
-    model_name_or_path: str = "google/gemma-3-4b-pt",
+    model_name_or_path: str = "meta-llama/Llama-3.2-1B",
     dataset: str = "virtualHome",
     max_gen_len: int = 768,
     temperature: float = 0.0,
@@ -427,8 +427,8 @@ def main(
     max_samples: Optional[int] = None,
     dtype: str = "bf16",
     output_dir: str = "outputs/virtualHome",
-    output_name: str = "inference-gemma-func-4b.jsonl",
-    func_head_path: Optional[str] = None,
+    output_name: str = "inference-llama-3.2-1b-func-4b.jsonl",
+    func_head_path: Optional[str] = "checkpoints_head_only/head_best.pth", #None
     max_func_calls: int = 16,
     op_arg_retry_limit: int = 1,
     # Resume support: start processing from this dataset index and append to existing JSONL
