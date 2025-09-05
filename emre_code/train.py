@@ -435,11 +435,17 @@ def main(
         data = data[: max_train_samples]
         print(f"[INFO] Using first {len(data)} examples for training (max_train_samples)")
 
-    # Split: last 5% as validation (at least 16)
-    val_len = max(16, int(0.05 * len(data)))
-    train_data = data[:-val_len] if val_len < len(data) else data
-    val_data = data[-val_len:] if val_len < len(data) else []
-    print(f"[INFO] Train size={len(train_data)} | Val size={len(val_data)}")
+    import random
+    SEED = 42
+    n = len(data)
+    val_len = min(max(16, int(0.05 * n)), n)
+    random.seed(SEED)
+    all_idx = list(range(n))
+    val_idx = set(random.sample(all_idx, val_len)) if n else set()
+    val_data = [data[i] for i in val_idx]
+    train_data = [data[i] for i in all_idx if i not in val_idx]
+    print(sorted(list(val_idx))[:20])  # preview indices
+    print(f"[INFO] Train size={len(train_data)} | Val size={len(val_data)} (seed={SEED})")
 
     os.makedirs(save_dir, exist_ok=True)
 
