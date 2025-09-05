@@ -72,8 +72,9 @@ class FunctionHeadOnlyLight(nn.Module):
         return torch.softmax(logits, dim=-1)
 
 
-def read_templates(dataset: str) -> Dict[str, str]:
-    tdir = f"data/{dataset}/template"
+def read_templates(dataset: str, tdir: str) -> Dict[str, str]:
+    tdir = f"data/{dataset}/{tdir}"
+    
     templates: Dict[str, str] = {}
     for name in os.listdir(tdir):
         print(f"Loading template {name} from {tdir}")
@@ -88,8 +89,8 @@ def load_func_dict(dataset: str) -> Dict[str, int]:
         return json.load(f)
 
 
-def build_questions(dataset: str) -> Tuple[List[str], List[float]]:
-    test_path = f"data/{dataset}/test.json"
+def build_questions(dataset: str, test_file: str) -> Tuple[List[str], List[float]]:
+    test_path = f"data/{dataset}/{test_file}"
     with open(test_path, "r", encoding="utf-8") as f:
         data = [json.loads(line) for line in f]
     questions: List[str] = []
@@ -364,8 +365,10 @@ def main(
     max_samples: Optional[int] = None,
     dtype: str = "bf16",
     output_dir: str = "outputs/gsm8k-xl",
-    output_name: str = "inference-baseline.jsonl",
+    output_name: str = "inference-func.jsonl",
     func_head_path: Optional[str] = None,
+    tdir: str = "template",
+    test_file: str = "test.json",
 ):
     t0 = time.time()
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -378,8 +381,8 @@ def main(
         func_dict = load_func_dict(dataset)
         head = FunctionHeadOnlyLight(model, func_dict)
         head.load_weights(func_head_path)
-    templates = read_templates(dataset)
-    questions, labels = build_questions(dataset)
+    templates = read_templates(dataset, tdir)
+    questions, labels = build_questions(dataset, test_file)
     if max_samples is not None:
         questions = questions[:max_samples]
         labels = labels[:max_samples]

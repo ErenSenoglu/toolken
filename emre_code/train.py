@@ -165,8 +165,8 @@ class FunctionHeadOnly(nn.Module):
 
             if isinstance(start_idxs, list) and isinstance(end_idxs, list) and j < len(start_idxs):
                 #MODIFICATIONS HERE!! LLama and Phi
-                s_direct = int(start_idxs[j]) -1 
-                e_direct = int(end_idxs[j]) -1 if j < len(end_idxs) else s_direct
+                s_direct = int(start_idxs[j]) 
+                e_direct = int(end_idxs[j])  if j < len(end_idxs) else s_direct
                 if 0 <= s_direct < len(labels):
                     labels[s_direct] = int(self.func_dict[op])
                     ops_dbg.append({"raw_eq": eq, "op": op, "pos": s_direct, "len": max(0, e_direct - s_direct), "via": "idx-direct"})
