@@ -365,18 +365,18 @@ def func_infer_one(
 
 
 def main(
-    model_name_or_path: str = "google/gemma-3-4b-pt",
-    dataset: str = "gsm8k-xl",
-    max_gen_len: int = 256,
+    model_name_or_path: str = "/workspace/.hf_home/hub/models--google--gemma-3-4b-pt/snapshots/cc012e0a6d0787b4adcc0fa2c4da74402494554d",
+    dataset: str = "funcqa",
+    max_gen_len: int = 768,
     temperature: float = 0.0,
     top_p: float = 0.95,
     max_samples: Optional[int] = None,
     dtype: str = "bf16",
-    output_dir: str = "outputs/gsm8k-xl",
-    output_name: str = "inference-func-5ep1e2.jsonl",
-    func_head_path: Optional[str] = None,
-    tdir: str = "template",
-    test_file: str = "test.json",
+    output_dir: str = "outputs/funcqa",
+    output_name: str = "inference-funqa.jsonl",
+    func_head_path: Optional[str] = "/workspace/toolken/emre_code/checkpoints_head_only/funcqa/google/gemma-3-4b-pt/head_best.pth",
+    tdir: str = "template_oh",
+    test_file: str = "funcqa_oh.json",
 ):
     t0 = time.time()
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
