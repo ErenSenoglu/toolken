@@ -363,21 +363,24 @@ def per_class_metrics(tp: np.ndarray, pred: np.ndarray, true: np.ndarray):
 
 
 def main(
-    model_name_or_path: str,
-    input_file: str,
+    model_name_or_path: str = "/workspace/.hf_home/hub/models--google--gemma-3-4b-pt/snapshots/cc012e0a6d0787b4adcc0fa2c4da74402494554d",
+    input_file: str = "data/funcqa/train.json",
     dataset: str = "gsm8k-xl",  # used to pick function dictionary
     lr: float = 1e-3,
     num_epochs: int = 3, #Qwen use 5, Phi use 7
-    max_train_samples: int | None = 512,  # keep small for overfit/debug
+    max_train_samples: int | None = 1024,  # keep small for overfit/debug
     shuffle_each_epoch: bool = True,
-    save_dir: str = "checkpoints_head_only",
+    save_dir: str = "checkpoints_head_only_plus",
     use_wandb: bool = True,
-    wandb_project: str = "toolkengpt",
+    wandb_project: str = "toolkengpt-funcqa-plus",
     wandb_run_name: str | None = None,
     only_functoken: bool = False,
     inspect_token_logits: bool = False,
     inspect_topk: int = 5,
     inspect_limit: int = 3,
+    val_fraction: float = 0.05,
+    min_val_samples: int = 16,
+    guarantee_all_classes_in_train: bool = True,
 ):
     """Train with joint logits concatenation (token + function) like train_llama."""
     set_seeds(1)
@@ -421,6 +424,8 @@ def main(
                     "lr": lr,
                     "num_epochs": num_epochs,
                     "max_train_samples": max_train_samples,
+                    "val_fraction": val_fraction,
+                    "min_val_samples": min_val_samples,
                 },
             )
 
@@ -435,16 +440,108 @@ def main(
         data = data[: max_train_samples]
         print(f"[INFO] Using first {len(data)} examples for training (max_train_samples)")
 
+    # Optional stratified split: preserve class distribution (approx) across train/val
+    # We repurpose the flag `guarantee_all_classes_in_train` to mean "use stratified split" now.
+    class_to_indices: Dict[int, List[int]] = {}
+    example_primary_class: List[int] = []  # primary class id per example (or -1 if none)
+    if guarantee_all_classes_in_train:
+        for idx_ex, ex in enumerate(data):
+            primary = -1
+            if isinstance(ex.get("text"), str):
+                try:
+                    text_ids = head_model._encode_with_specials(ex["text"])
+                    labels, _ = head_model.build_labels(ex, text_ids, debug=False)
+                    # collect unique function labels in this example
+                    func_labels = [int(l) for l in labels if l >= 0]
+                    if func_labels:
+                        # choose first occurrence as primary (heuristic). Could also choose most frequent.
+                        primary = func_labels[0]
+                except Exception:
+                    pass
+            example_primary_class.append(primary)
+            class_to_indices.setdefault(primary, []).append(idx_ex)
+        total_examples = len(data)
+        present_classes = [cid for cid, idxs in class_to_indices.items() if cid != -1 and idxs]
+        print(f"[INFO] Stratified mode: {len(present_classes)}/{K} function classes present; plus nofunc group size={len(class_to_indices.get(-1, []))}")
+    else:
+        example_primary_class = []
+
     import random
     SEED = 42
     n = len(data)
-    val_len = min(max(16, int(0.05 * n)), n)
+    # Compute validation length based on user-specified fraction & minimum, allowing 0 to disable val set.
+    if val_fraction <= 0.0 or n == 0:
+        val_len = 0
+    else:
+        val_len = min(max(min_val_samples, int(val_fraction * n)), n)
     random.seed(SEED)
     all_idx = list(range(n))
-    val_idx = set(random.sample(all_idx, val_len)) if n else set()
-    val_data = [data[i] for i in val_idx]
-    train_data = [data[i] for i in all_idx if i not in val_idx]
-    print(sorted(list(val_idx))[:20])  # preview indices
+
+    if val_len > 0:
+        if guarantee_all_classes_in_train:
+            # Stratified sampling using largest remainder method per primary class group (including -1 group)
+            groups = list(class_to_indices.keys())
+            # Ensure deterministic order: put real classes first then -1
+            groups = sorted([g for g in groups if g != -1]) + ([-1] if -1 in groups else [])
+            group_sizes = {g: len(class_to_indices[g]) for g in groups}
+            n_float = float(n)
+            raw_alloc = {g: (group_sizes[g] / n_float) * val_len for g in groups}
+            val_alloc = {g: int(raw_alloc[g]) for g in groups}
+            # Distribute remaining slots by descending fractional part
+            remaining = val_len - sum(val_alloc.values())
+            if remaining > 0:
+                remainders = sorted(((raw_alloc[g] - val_alloc[g], g) for g in groups), reverse=True)
+                for frac, g in remainders:
+                    if remaining <= 0:
+                        break
+                    if val_alloc[g] < group_sizes[g]:
+                        val_alloc[g] += 1
+                        remaining -= 1
+            # Safety clamp
+            for g in groups:
+                if val_alloc[g] > group_sizes[g]:
+                    overflow = val_alloc[g] - group_sizes[g]
+                    val_alloc[g] = group_sizes[g]
+                    remaining += overflow
+            if remaining > 0:
+                # Fill any leftover in groups with spare capacity
+                for g in groups:
+                    if remaining <= 0:
+                        break
+                    cap = group_sizes[g] - val_alloc[g]
+                    if cap > 0:
+                        take = min(cap, remaining)
+                        val_alloc[g] += take
+                        remaining -= take
+            # Sample per group
+            val_indices_list: List[int] = []
+            for g in groups:
+                k_take = val_alloc[g]
+                if k_take <= 0:
+                    continue
+                pool = class_to_indices[g]
+                if k_take >= len(pool):
+                    chosen = pool  # take all
+                else:
+                    chosen = random.sample(pool, k_take)
+                val_indices_list.extend(chosen)
+            val_idx = set(val_indices_list)
+            train_data = [ex for i, ex in enumerate(data) if i not in val_idx]
+            val_data = [ex for i, ex in enumerate(data) if i in val_idx]
+            print(f"[INFO] Stratified split complete: requested={val_len} actual={len(val_data)} groups={len(groups)}")
+            # Optional summary: first few per-class allocations
+            preview = {g: (group_sizes[g], val_alloc[g]) for g in groups[:10]}
+            print(f"[INFO] Allocation preview (group: (total, val_taken)) -> {preview}")
+        else:
+            val_idx = set(random.sample(all_idx, val_len))
+            val_data = [data[i] for i in val_idx]
+            train_data = [data[i] for i in all_idx if i not in val_idx]
+            print(sorted(list(val_idx))[:20])  # preview indices
+    else:
+        val_idx = set()
+        val_data = []
+        train_data = data
+    print(f"[INFO] val_fraction={val_fraction} min_val_samples={min_val_samples} -> val_len={val_len}")
     print(f"[INFO] Train size={len(train_data)} | Val size={len(val_data)} (seed={SEED})")
 
     os.makedirs(save_dir, exist_ok=True)
