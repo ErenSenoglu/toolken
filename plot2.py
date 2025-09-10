@@ -55,6 +55,8 @@ Accuracy EXACT: 0.4166666666666667
 Accuracy APPROX: 0.6333333333333333
 """
 
+
+
 # --- Data Parsing and Preparation ---
 
 def parse_size_from_name(name):
@@ -85,7 +87,7 @@ for block in blocks:
     # Func data
     func_exact = float(lines[2].split(': ')[1]) * 100
     func_approx = float(lines[3].split(': ')[1]) * 100
-    records.append([model_name_simple, 'Func', func_exact, func_approx, model_size])
+    records.append([model_name_simple, 'Toolken', func_exact, func_approx, model_size])
     
     # Baseline data
     baseline_exact = float(lines[5].split(': ')[1]) * 100
@@ -112,8 +114,8 @@ df['Model_Sized'] = df.apply(lambda row: f"{row['Model']}-{format_size(row['Size
 # Calculate the 'Partial Match' score for the stacked bar
 df['Partial Match'] = df['Approx Match'] - df['Exact Match']
 
-# Ensure 'Baseline' always comes before 'Func' by setting Type as a categorical
-df['Type'] = pd.Categorical(df['Type'], categories=['Baseline', 'Func'], ordered=True)
+# Ensure 'Baseline' always comes before 'Toolken' by setting Type as a categorical
+df['Type'] = pd.Categorical(df['Type'], categories=['Baseline', 'Toolken'], ordered=True)
 
 # Sort data for grouped plotting logic
 df_sorted = df.sort_values(by=['Size', 'Model','Type'])
@@ -153,7 +155,7 @@ tick_labels.append(last_model_sized)
 
 
 # --- Plotting ---
-fig, ax = plt.subplots(figsize=(16, 9))
+fig, ax = plt.subplots(figsize=(16, 8))
 
 # Plot the stacked bars (Exact Match first, then Partial Match on top)
 ax.bar(positions, df_sorted['Exact Match'], width=bar_width, label='Exact Match', color='dodgerblue')
@@ -162,21 +164,26 @@ ax.bar(positions, df_sorted['Partial Match'], width=bar_width, bottom=df_sorted[
 # Add annotations (Baseline/Func) below the bars for clarity
 y_offset_type = -5  # How far below the x-axis to place the type label
 for pos, type_label in zip(positions, df_sorted['Type']):
-    ax.text(pos, y_offset_type, type_label, ha='center', va='top', fontsize=9, color='gray', fontweight='bold')
+    ax.text(pos, y_offset_type, type_label, ha='center', va='top', fontsize=10, color='black', fontweight='bold')
 
 # Add total value labels on top of each bar
 for pos, total in zip(positions, df_sorted['Approx Match']):
-    ax.text(pos, total + 0.5, f'{total:.2f}', ha='center', va='bottom', fontsize=9, fontweight='bold')
+    ax.text(pos, total + 0.5, f'{total:.2f}', ha='center', va='bottom', fontsize=16, fontweight='bold')
 
 # --- Final Touches ---
-ax.set_ylabel('Performance Score (%)', fontsize=12, fontweight='bold')
-ax.set_title('Grouped Performance Breakdown: Baseline vs. Func', fontsize=16, fontweight='bold')
-ax.legend()
+ax.set_ylabel('Performance Score (%)', fontsize=20, fontweight='bold')
+ax.set_title('Grouped Performance Breakdown: Baseline vs. Toolken', fontsize=20, fontweight='bold')
+ax.legend(fontsize=20)
 ax.grid(axis='y', linestyle='--', alpha=0.7)
 
-# Set the x-ticks and labels to be centered under each model group
+# Set the x-ticks and labels to be centered under each model group, increase tick size and make them bold
 ax.set_xticks(tick_positions)
-ax.set_xticklabels(tick_labels, rotation=45, ha="right")
+ax.set_xticklabels(tick_labels, rotation=45, ha="right", fontsize=16, fontweight='bold')
+#put yticks from 0 to 100 with step 10, increase tick size and make them bold
+ax.set_yticks(np.arange(0, 81, 10))
+#make them bold
+
+ax.tick_params(axis='y', labelsize=24)
 
 # Adjust y-axis limits to make space for annotations below
 ax.set_ylim(bottom=y_offset_type - 10)
@@ -184,7 +191,7 @@ ax.set_ylim(bottom=y_offset_type - 10)
 plt.tight_layout()
 # Adjust layout to prevent labels from being cut off
 plt.subplots_adjust(bottom=0.2)
-plt.savefig('grouped_stacked_performance_funcqua.png')
-print("Generated plot and saved as 'grouped_stacked_performance_funcqua.png'")
+plt.savefig('grouped_stacked_performance_funcqa.png')
+print("Generated plot and saved as 'grouped_stacked_performance_funcqa.png'")
 # plt.show() # Uncomment to display the plot directly if running locally
 

@@ -59,18 +59,21 @@ df = df.sort_values(by='learning_rate')
 baseline_exact_accuracy = 0.4166666666666667
 baseline_approx_accuracy = 0.6333333333333333
 
-plt.figure(figsize=(10, 6))
-plt.plot(df['learning_rate'], df['exact_accuracy'], marker='o', linestyle='-', label='EXACT Accuracy')
-plt.plot(df['learning_rate'], df['approx_accuracy'], marker='o', linestyle='-', label='APPROX Accuracy')
+plt.figure(figsize=(12, 6))
+plt.plot(df['learning_rate'], df['exact_accuracy'], marker='o', linestyle='-', label='Exact Accuracy', linewidth=5)
+plt.plot(df['learning_rate'], df['approx_accuracy'], marker='o', linestyle='-', label='Approximate Accuracy', linewidth=5)
 
-plt.axhline(y=baseline_exact_accuracy, color='r', linestyle='--', label='BASELINE EXACT Accuracy')
-plt.axhline(y=baseline_approx_accuracy, color='g', linestyle='--', label='BASELINE APPROX Accuracy')
+plt.axhline(y=baseline_exact_accuracy, color='r', linestyle='--', label='Baseline Exact Accuracy', linewidth=5)
+plt.axhline(y=baseline_approx_accuracy, color='g', linestyle='--', label='Baseline Approximate Accuracy', linewidth=5)
 
 plt.xscale('log')
-plt.xlabel('Learning Rate (log scale)')
-plt.ylabel('Accuracy')
-plt.title('Effect of Learning Rate on Model Performance')
-plt.legend()
+plt.xlabel('Learning Rate (log scale)', fontsize=24, fontweight='bold')
+plt.ylabel('Accuracy', fontsize=24, fontweight='bold')
+plt.title('Effect of Learning Rate on Model Performance', fontsize=24, fontweight='bold', pad=20)
+#increase tick size and make them bold
+plt.tick_params(axis='x', labelsize=20)
+plt.tick_params(axis='y', labelsize=20)
+plt.legend(fontsize=12)
 plt.grid(True, which="both", ls="--")
 plt.tight_layout()
 plt.savefig('lr_ablation_study_with_baseline.png')
