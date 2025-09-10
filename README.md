@@ -101,7 +101,7 @@ Please visit the eval.py and eval_funcqa.ipynb files for evaluation. Evaluation 
 ### FuncQA
 - **Path**: `funcqa-experiments/data/funcqa/`
 - **Description**: Mathematical reasoning tasks requiring function calls
-- **Functions**: 12 different arithmetic operations such as `<power>`, `<log>`, etc.
+- **Functions**: 13 different arithmetic operations such as `<power>`, `<log>`, etc.
 
 ### VirtualHome
 - **Path**: `virtualhome-experiments/`
